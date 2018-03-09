@@ -2,15 +2,15 @@
  * Main class that defines all control funtions for a chart.
  *
  * ### Example
- *
+ * <pre>
  * import { MatchChart } from 'math-chart'
  * let chart = new MatchChart()
  * chart.setChartContainer('elementId')
- *
+ * </pre>
  */
 class MathChart {
   containerId: string;
-  functions: any[];
+  functions: any[] = [];
   /**
    * Sets a parent container where the chart will be drawn
    * @param containerId A container element (defined with html id) to draw a chart in
