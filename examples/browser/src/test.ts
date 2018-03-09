@@ -1,3 +1,3 @@
-import mathChart from 'math-chart';
-console.log(mathChart);
-mathChart.method1();
+import { MathChart } from 'math-chart';
+console.log(MathChart);
+MathChart.prototype.method1();
