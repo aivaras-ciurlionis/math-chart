@@ -1,9 +1,9 @@
 class MathChart {
 
-    method1 = () => {
-        console.log('This is working!!!');
-    }
+  method1 = () => {
+    console.log('This is working!!!')
+  }
 
 }
 
-export { MathChart };
+export { MathChart }
