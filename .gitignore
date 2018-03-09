@@ -1,7 +1,7 @@
 node_modules
 test
 src/**.js
-
+build
 coverage
 .nyc_output
 *.log
