@@ -1,9 +1,8 @@
-class MathChart {
+import { MathChart } from './lib/math-chart';
 
-  method1 = () => {
-    console.log('This is working!!!')
-  }
-
+let testMethod = () => {
+  let chart = new MathChart();
+  chart.method1();
 }
 
-export { MathChart }
+export { testMethod }
