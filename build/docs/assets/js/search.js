@@ -1,3 +1,0 @@
-﻿var typedoc = typedoc || {};
-            typedoc.search = typedoc.search || {};
-            typedoc.search.data = {"kinds":{"128":"Class","2048":"Method"},"rows":[{"id":0,"kind":128,"name":"MathChart","url":"classes/mathchart.html","classes":"tsd-kind-class tsd-is-not-exported"},{"id":1,"kind":2048,"name":"method1","url":"classes/mathchart.html#method1","classes":"tsd-kind-method tsd-parent-kind-class tsd-is-not-exported","parent":"MathChart"}]};

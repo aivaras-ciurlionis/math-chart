@@ -1,14 +1,14 @@
 class MathChart {
 
-    method1 = () => {
-      console.log('This is working!!!');
-    }
-
-    method2 = () => {
-        let a : string = '123';
-        console.log(a);
-    }
-  
+  method1 = () => {
+    console.log('This is working!!!')
   }
-  
-  export { MathChart }  
+
+  method2 = () => {
+    let a: string = '123'
+    console.log(a)
+  }
+
+}
+
+export { MathChart }
