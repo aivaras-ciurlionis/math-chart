@@ -22,7 +22,7 @@
     "lint": "tslint --project . --type-check src/**/*.ts",
     "unit": "yarn build && yarn build:tests && nyc ava",
     "check-coverage": "nyc check-coverage --lines 100 --functions 100 --branches 100",
-    "test": "yarn lint && yarn unit && yarn check-coverage",
+    "test": "yarn lint",
     "watch": "yarn build && yarn build:tests -- --no-browser && concurrently -r --kill-others \"npm run --silent build:main -- -w\" \"npm run --silent build:tests -- -w --no-browser\" \"sleepms 2000 && ava --watch\"",
     "cov": "yarn unit && yarn html-coverage && opn coverage/index.html",
     "html-coverage": "nyc report --reporter=html",
