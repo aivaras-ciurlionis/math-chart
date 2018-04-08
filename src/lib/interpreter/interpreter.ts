@@ -90,4 +90,4 @@ class Interpreter implements IInterpreter {
     }
 }
 
-export { IInterpreter };
+export { IInterpreter, Interpreter };
