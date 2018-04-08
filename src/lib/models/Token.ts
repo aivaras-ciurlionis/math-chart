@@ -21,7 +21,7 @@ class Token {
   LeftExpression: IExpression;
   RightExpression: IExpression;
 
-  MultiplyToken(): Token {
+  static MultiplyToken(): Token {
     var token = Object.assign(new Token(), {
       value: '*',
       Arity: 2,

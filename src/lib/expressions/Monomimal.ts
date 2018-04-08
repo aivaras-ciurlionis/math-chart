@@ -17,6 +17,14 @@ class Monomial implements IExpression {
   }
 
   /**
+   * Sets given variables to monomial
+   * @param variables A list os of variables
+   */
+  SetVariables(variables: Variable[]) {
+    this.Variables = variables;
+  }
+
+  /**
    * Evaluates current expression and returns its numerical result.
    * All variables should be replaced with numerical values before execution.
    */
@@ -41,3 +49,5 @@ class Monomial implements IExpression {
   }
 
 }
+
+export { Monomial }
