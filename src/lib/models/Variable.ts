@@ -2,6 +2,10 @@ class Variable {
   Exponent: number;
   Name: string;
 
+  constructor(name: string, exponent: number) {
+
+  }
+
   Evaluate(value: number): number {
     return Math.pow(value, this.Exponent);
   }
