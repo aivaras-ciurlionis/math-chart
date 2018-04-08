@@ -39,4 +39,4 @@ class Parser implements IParser {
     }
 }
 
-export { Parser, IParser };
+export { IParser, Parser };

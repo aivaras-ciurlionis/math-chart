@@ -28,7 +28,7 @@ interface IExpressionFactory {
    * Returns a matching expression from a key
    * @param key Expression key (+/- etc..)
    */
-  GetExpressionByKey(key: string);
+  GetExpressionByKey(key: string): IExpression;
 
 }
 
@@ -37,8 +37,8 @@ class ExpressionFactory implements IExpressionFactory {
    * Returns a matching expression from a key
    * @param key Expression key (+/- etc..)
    */
-  GetExpressionByKey(key: string) {
-    const operands = [null, null];
+  GetExpressionByKey(key: string): IExpression {
+    const operands : IExpression[] = [null, null];
     return this.GetExpressionByOperands(key, operands);
   }
 
@@ -57,8 +57,8 @@ class ExpressionFactory implements IExpressionFactory {
   * @param lastToken Last added token
   */
   GetExpressionByLastToken(key: string, lastToken: Token): IExpression {
-    const operands = [null, null];
-    return this.GetExpression(key, operands, lastToken ? lastToken.TokenType : TokenType.Other);
+    const operands : IExpression[] = [null, null];
+    return this.GetExpression(key, operands, lastToken ? lastToken.TypeOfToken : TokenType.Other);
 
   }
 

@@ -3,7 +3,8 @@ class Variable {
   Name: string;
 
   constructor(name: string, exponent: number) {
-
+    this.Exponent = exponent;
+    this.Name = name;
   }
 
   Evaluate(value: number): number {

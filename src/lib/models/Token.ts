@@ -9,7 +9,7 @@ enum TokenType {
 
 
 class Token {
-  TokenType: TokenType;
+  TypeOfToken: TokenType;
   Value: string;
   Level: number;
   Order: number;
@@ -32,4 +32,4 @@ class Token {
   }
 }
 
-export { Token, TokenType }
+export { TokenType, Token }

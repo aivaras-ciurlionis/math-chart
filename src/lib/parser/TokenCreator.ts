@@ -19,7 +19,7 @@ interface ITokenCreator {
     * @param value String value of a symbol
     * @param level A level inside parenthesis
     */
-    GetToken(type: SymbolType, value: string, level: number);
+    GetToken(type: SymbolType, value: string, level: number): Token;
 }
 
 class TokenCreator implements ITokenCreator {
@@ -44,7 +44,7 @@ class TokenCreator implements ITokenCreator {
         if (type === SymbolType.Numeric) {
             token.Order = 0;
             token.Arity = 0;
-            token.TokenType = TokenType.Number;
+            token.TypeOfToken = TokenType.Number;
             return token;
         }
 
@@ -52,11 +52,11 @@ class TokenCreator implements ITokenCreator {
         if (expression) {
             token.Order = expression.Order;
             token.Arity = expression.Arity;
-            token.TokenType = TokenType.Operation;
+            token.TypeOfToken = TokenType.Operation;
         } else {
             token.Order = 0;
             token.Arity = 0;
-            token.TokenType = TokenType.Variable;
+            token.TypeOfToken = TokenType.Variable;
         }
         return token;
     }

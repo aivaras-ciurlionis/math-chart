@@ -31,7 +31,7 @@ class MinOperationFinder implements IMinOperationFinder {
     minToken.Level = 999;
     minToken.Order = -1;
     tokens.forEach(token => {
-      if (token.TokenType === TokenType.Operation &&
+      if (token.TypeOfToken === TokenType.Operation &&
         this.IsTokenSmaller(token, minToken)) {
         minIndex = i;
         minToken = token;

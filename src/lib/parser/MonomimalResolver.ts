@@ -17,11 +17,11 @@ class MonomialResolver implements IMonomialResolver {
       throw "Empty token!";
     }
 
-    if (token.TokenType !== TokenType.Number && token.TokenType !== TokenType.Variable) {
-      throw `Invalid token type: ${token.TokenType}; value: ${token.Value}`;
+    if (token.TypeOfToken !== TokenType.Number && token.TypeOfToken !== TokenType.Variable) {
+      throw `Invalid token type: ${token.TypeOfToken}; value: ${token.Value}`;
     }
 
-    if (token.TokenType === TokenType.Number) {
+    if (token.TypeOfToken === TokenType.Number) {
       return new Monomial(parseFloat(token.Value));
     }
 

@@ -25,8 +25,8 @@ class TokenFixer implements ITokenFixer {
       return null;
     }
 
-    if (lastToken.TokenType === TokenType.Number ||
-      lastToken.TokenType === TokenType.Variable &&
+    if (lastToken.TypeOfToken === TokenType.Number ||
+      lastToken.TypeOfToken === TokenType.Variable &&
       currentToken.Value === '('
     ) {
       return Token.MultiplyToken();
@@ -36,8 +36,8 @@ class TokenFixer implements ITokenFixer {
       return Token.MultiplyToken();
     }
 
-    if (currentToken.TokenType == TokenType.Variable &&
-      lastToken.TokenType === 0 &&
+    if (currentToken.TypeOfToken == TokenType.Variable &&
+      lastToken.TypeOfToken === 0 &&
       currentToken.Value !== '0') {
       return Token.MultiplyToken();
     }
