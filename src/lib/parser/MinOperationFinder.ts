@@ -11,7 +11,8 @@ class MinOperationFinder implements IMinOperationFinder {
       return true;
     }
 
-    if (t1.Level === t2.Level) {
+    if (t1.Level === t2.Level &&
+      t1.Order > t2.Order) {
       return true;
     }
 

@@ -25,8 +25,8 @@ class TokenFixer implements ITokenFixer {
       return null;
     }
 
-    if (lastToken.TypeOfToken === TokenType.Number ||
-      lastToken.TypeOfToken === TokenType.Variable &&
+    if ((lastToken.TypeOfToken === TokenType.Number ||
+      lastToken.TypeOfToken === TokenType.Variable) &&
       currentToken.Value === '('
     ) {
       return Token.MultiplyToken();

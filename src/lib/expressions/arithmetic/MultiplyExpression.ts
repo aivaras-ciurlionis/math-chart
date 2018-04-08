@@ -7,7 +7,7 @@ import { BaseExpression } from "../BaseExpression";
 class MultiplyExpression extends BaseExpression {
   Operands: IExpression[];
   Arity: number = 2;
-  Order: number = 2
+  Order: number = 2;
 
   constructor(left: IExpression, right: IExpression) {
     super();

@@ -21,7 +21,7 @@
     ],
     "baseUrl": ".", // required for "paths"
     "paths": {
-      "typescript-starter": ["src/index.ts"] // write tests without relative paths
+      "math-chart": ["src/index.ts"] // write tests without relative paths
     }
   },
   "include": [

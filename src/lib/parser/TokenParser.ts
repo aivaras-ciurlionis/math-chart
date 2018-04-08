@@ -35,6 +35,7 @@ class TokenParser implements ITokenParser {
       lastToken.RightToken = token;
     }
     if (!token) return;
+    token.LeftToken = lastToken;
     let fixedToken = this.tokenFixer.GetAdditionalToken(lastToken, token);
     if (fixedToken) {
       fixedToken.Index = this.tokens.length;
