@@ -8,7 +8,7 @@ const minStep = 0.25;
 /**
  * Class that performs functions drawing in graph
  */
-const prepareCanvas = (container): CanvasContext => {
+const prepareCanvas = (container: any): CanvasContext => {
   let canvas = document.getElementById(`${container}`);
   let context = canvas.getContext('2d');
   context.moveTo(0, 0);
@@ -50,7 +50,7 @@ class GraphDrawer {
   }
 
   TryDrawVertical(ctx: any, settings: any, pixelsX: number, x: number, height: number) {
-    let gridValue = settings.find(s => x % s.unit < 0.0001);
+    let gridValue = settings.find((s:any) => x % s.unit < 0.0001);
     if (gridValue) {
       ctx.lineWidth = gridValue.width;
       ctx.moveTo(pixelsX, 0);
@@ -60,7 +60,7 @@ class GraphDrawer {
   }
 
   TryDrawHorizontal(ctx: any, settings: any, pixelsY: number, y: number, width: number) {
-    let gridValue = settings.find(s => y % s.unit < 0.0001);
+    let gridValue = settings.find((s:any) => y % s.unit < 0.0001);
     if (gridValue) {
       ctx.lineWidth = gridValue.width;
       ctx.moveTo(0, pixelsY);
