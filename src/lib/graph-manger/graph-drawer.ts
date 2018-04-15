@@ -1,6 +1,6 @@
 import FunctionEvaluationResult from "../functions-manager/function-evaluation-result";
 import Viewport from "./viewport";
-import GraphSettings from "./graph-settings";
+import GraphSettings, { GridWidthSetting } from "./graph-settings";
 import CanvasContext from "./canvas-context";
 
 const minStep = 0.25;
@@ -60,8 +60,8 @@ class GraphDrawer {
     }
   }
 
-  TryDrawHorizontal(ctx: any, settings: any, pixelsY: number, y: number, width: number) {
-    let gridValue = settings.find((s:any) => y % s.unit < 0.0001);
+  TryDrawHorizontal(ctx: any, settings: GridWidthSetting, pixelsY: number, y: number, width: number) {
+    let gridValue = settings.GridWidths.find(s => y % s.unit < 0.0001);
     if (gridValue) {
       ctx.lineWidth = gridValue.width;
       ctx.moveTo(0, pixelsY);
@@ -78,7 +78,7 @@ class GraphDrawer {
     const adjustedPixelsPerValue = pixelsPerValue * minStep;
     let currentPixelsX = startingOffsetX;
     let currentX = startingPointX;
-    const scaleSettings = this.Settings.gridWidth.find(s => s.scale < viewport.Scale);
+    const scaleSettings = this.Settings.gridWidths.find(s => s.Scale < viewport.Scale);
 
     // Draw vertical grid
     while (currentPixelsX < context.Width) {

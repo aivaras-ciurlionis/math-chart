@@ -1,49 +1,35 @@
+class GridWidth {
+  constructor(unit: number, width: number) {
+    this.unit = unit;
+    this.width = width;
+  }
+  unit: number;
+  width: number;
+}
+
+class GridWidthSetting {
+  constructor(scale: number, widths: GridWidth[]) {
+    this.Scale = scale;
+    this.GridWidths = widths;
+  }
+  GridWidths: GridWidth[];
+  Scale: number;
+}
+
+
 class GraphSettings {
   constructor(params: any) {
     this.drawGrid = params.drawGrid || true;
     this.gridColor = params.gridColor || '#75ea88';
+    this.gridWidths = [
+      new GridWidthSetting(5, [new GridWidth(1, 2), new GridWidth(0.25, 1)]),
+      new GridWidthSetting(1, [new GridWidth(5, 2), new GridWidth(1, 1)])
+    ]
   }
   drawGrid: boolean;
   gridColor: string;
-  gridWidth: [
-    //-----------------------------
-    {
-      scale: 5,
-      gridWidths: [
-        [
-          {
-            unit: 1,
-            width: 2
-          },
-          {
-            unit: 0.25,
-            width: 1
-          }
-        ]
-      ]
-    },
-    //-----------------------------
-    {
-      scale: 1,
-      gridWidths: [
-        [
-          {
-            unit: 5,
-            width: 2
-          },
-          {
-            unit: 1,
-            width: 1
-          }
-        ]
-      ]
-    }
-    //-----------------------------
-  ]
-
-
-
-
+  gridWidths: GridWidthSetting[];
 }
 
+export { GridWidthSetting, GridWidth };
 export default GraphSettings;
