@@ -85,7 +85,7 @@ class Interpreter implements IInterpreter {
      * @param replacementDictionary Variable replacement values: {x: 2, y : 4}
      */
     EvaluateParsedExpression(expression: IExpression, replacementDictionary: any): number {
-        expression.ReplaceVariables(replacementDictionary);
+        expression = expression.ReplaceVariables(replacementDictionary);
         return expression.Execute();
     }
 }

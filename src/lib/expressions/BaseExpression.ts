@@ -20,8 +20,8 @@ abstract class BaseExpression implements IExpression {
 	 * @returns Expression with numerical values
 	 */
     ReplaceVariables(replacementDictionary: any): IExpression {
-        this.Operands.forEach(operand => {
-            operand = operand.ReplaceVariables(replacementDictionary);
+        this.Operands.forEach((operand, i) => {
+            this.Operands[i] = operand.ReplaceVariables(replacementDictionary);
         });
         return this;
     }

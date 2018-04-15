@@ -23,10 +23,10 @@ class Token {
 
   static MultiplyToken(): Token {
     var token = Object.assign(new Token(), {
-      value: '*',
+      Value: '*',
       Arity: 2,
       Order: 2,
-      TokenType: TokenType.Operation
+      TypeOfToken: TokenType.Operation
     });
     return token;
   }
