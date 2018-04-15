@@ -92,7 +92,7 @@ class GraphDrawer {
     let currentY = startingPointY;
 
     // Draw horizontal grid
-    while (currentPixelsX < context.Width) {
+    while (currentPixelsY > 0) {
       this.TryDrawHorizontal(ctx, scaleSettings, currentPixelsY, currentY, context.Width);
       currentPixelsY -= adjustedPixelsPerValue;
       currentY -= minStep;
