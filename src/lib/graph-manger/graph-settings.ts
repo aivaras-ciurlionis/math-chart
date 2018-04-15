@@ -31,5 +31,5 @@ class GraphSettings {
   gridWidths: GridWidthSetting[];
 }
 
-export { GridWidthSetting, GridWidth };
+export {GridWidth,  GridWidthSetting };
 export default GraphSettings;
