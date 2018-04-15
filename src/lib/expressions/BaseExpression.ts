@@ -25,6 +25,8 @@ abstract class BaseExpression implements IExpression {
         });
         return this;
     }
+
+    abstract Clone(): IExpression;
 }
 
 export { BaseExpression };

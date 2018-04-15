@@ -1,4 +1,4 @@
-import MathChart from 'math-chart';
-let chart = new MathChart();
-chart.setChartContainer('containerId');
-chart.addFunction('x^2-12');
+import { Interpreter } from 'math-chart';
+
+let interpreter = new Interpreter();
+console.log(interpreter.ExecuteExpression('2+2'));

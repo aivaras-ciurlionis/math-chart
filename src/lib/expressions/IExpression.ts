@@ -18,6 +18,11 @@ interface IExpression {
 	 * @returns Expression with numerical values
 	 */
 	ReplaceVariables(replacementDictionary: any): IExpression;
+
+	/**
+	 * Clones current function
+	 */
+	Clone() : IExpression;
 }
 
 export { IExpression }

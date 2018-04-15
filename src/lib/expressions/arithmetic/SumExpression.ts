@@ -20,6 +20,11 @@ class SumExpression extends BaseExpression {
   Execute(): number {
     return this.Operands[0].Execute() + this.Operands[1].Execute();
   }
+
+  Clone() : IExpression {
+    return new SumExpression(this.Operands[0], this.Operands[1]);
+  }
+
 }
 
 export { SumExpression };

@@ -20,6 +20,11 @@ class NegationExpression extends BaseExpression {
   Execute(): number {
     return -this.Operands[0].Execute();
   }
+
+  Clone() : IExpression {
+    return new NegationExpression(this.Operands[0]);
+  }
+
 }
 
 export { NegationExpression };

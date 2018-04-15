@@ -20,6 +20,11 @@ class ParenthesisExpression extends BaseExpression {
   Execute(): number {
     return this.Operands[0].Execute();
   }
+
+  Clone() : IExpression {
+    return new ParenthesisExpression(this.Operands[0]);
+  }
+
 }
 
 export { ParenthesisExpression };

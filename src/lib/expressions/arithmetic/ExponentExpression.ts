@@ -20,6 +20,11 @@ class ExponentExpression extends BaseExpression {
   Execute(): number {
     return Math.pow(this.Operands[0].Execute(), this.Operands[1].Execute());
   }
+
+  Clone() : IExpression {
+    return new ExponentExpression(this.Operands[0], this.Operands[1]);
+  }
+
 }
 
 export { ExponentExpression };

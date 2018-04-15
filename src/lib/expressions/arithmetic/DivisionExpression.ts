@@ -20,6 +20,11 @@ class DivisionExpression extends BaseExpression {
   Execute(): number {
     return this.Operands[0].Execute() / this.Operands[1].Execute();
   }
+
+  Clone(): IExpression {
+    return new DivisionExpression(this.Operands[0], this.Operands[1]);
+  }
+
 }
 
 export { DivisionExpression };

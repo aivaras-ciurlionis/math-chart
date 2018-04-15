@@ -20,6 +20,11 @@ class SqrRootExpression extends BaseExpression {
   Execute(): number {
     return Math.sqrt(this.Operands[0].Execute());
   }
+
+  Clone() : IExpression {
+    return new SqrRootExpression(this.Operands[0]);
+  }
+
 }
 
 export { SqrRootExpression };
