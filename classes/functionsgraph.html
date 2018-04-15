@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>TokenType | math-chart</title>
+	<title>FunctionsGraph | math-chart</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style type="text/css">/*! normalize.css v1.1.3 | MIT License | git.io/normalize */
@@ -909,20 +909,41 @@ img { max-width: 100%; }
 </header>
 <nav class="tsd-navigation secondary">
 	<ul>
-		<li class="current tsd-kind-enum tsd-is-not-exported">
-			<a href="tokentype.html" class="tsd-kind-icon">Token<wbr>Type</a>
+		<li class="current tsd-kind-class">
+			<a href="functionsgraph.html" class="tsd-kind-icon">Functions<wbr>Graph</a>
 			<ul>
-				<li class=" tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported">
-					<a href="tokentype.html#number" class="tsd-kind-icon">Number</a>
+				<li class=" tsd-kind-constructor tsd-parent-kind-class">
+					<a href="functionsgraph.html#constructor" class="tsd-kind-icon">constructor</a>
 				</li>
-				<li class=" tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported">
-					<a href="tokentype.html#operation" class="tsd-kind-icon">Operation</a>
+				<li class=" tsd-kind-property tsd-parent-kind-class">
+					<a href="functionsgraph.html#container" class="tsd-kind-icon">Container</a>
 				</li>
-				<li class=" tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported">
-					<a href="tokentype.html#other" class="tsd-kind-icon">Other</a>
+				<li class=" tsd-kind-property tsd-parent-kind-class">
+					<a href="functionsgraph.html#functions" class="tsd-kind-icon">Functions</a>
 				</li>
-				<li class=" tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported">
-					<a href="tokentype.html#variable" class="tsd-kind-icon">Variable</a>
+				<li class=" tsd-kind-property tsd-parent-kind-class">
+					<a href="functionsgraph.html#graphdrawer" class="tsd-kind-icon">Graph<wbr>Drawer</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-class">
+					<a href="functionsgraph.html#pixelspervaluebase" class="tsd-kind-icon">Pixels<wbr>Per<wbr>Value<wbr>Base</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-class">
+					<a href="functionsgraph.html#viewport" class="tsd-kind-icon">Viewport</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class">
+					<a href="functionsgraph.html#addfunction" class="tsd-kind-icon">Add<wbr>Function</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class">
+					<a href="functionsgraph.html#draw" class="tsd-kind-icon">Draw</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class">
+					<a href="functionsgraph.html#removefunction" class="tsd-kind-icon">Remove<wbr>Function</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class">
+					<a href="functionsgraph.html#setcontainer" class="tsd-kind-icon">Set<wbr>Container</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class">
+					<a href="functionsgraph.html#setevaluationboundaries" class="tsd-kind-icon">Set<wbr>Evaluation<wbr>Boundaries</a>
 				</li>
 			</ul>
 		</li>
@@ -930,63 +951,295 @@ img { max-width: 100%; }
 </nav>
 <div class="container container-main">
 	<div class="content-wrap">
+		<section class="tsd-panel tsd-comment">
+			<div class="tsd-comment tsd-typography">
+				<div class="lead">
+					<p>Class that represents a graph with functions</p>
+				</div>
+			</div>
+		</section>
+		<section class="tsd-panel tsd-hierarchy">
+			<h3>Hierarchy</h3>
+			<ul class="tsd-hierarchy">
+				<li>
+					<span class="target">FunctionsGraph</span>
+				</li>
+			</ul>
+		</section>
+		<section class="tsd-panel">
+			<h3>Implements</h3>
+			<ul class="tsd-hierarchy">
+				<li><a href="../interfaces/ifunctionmanager.html" class="tsd-signature-type">IFunctionManager</a></li>
+			</ul>
+		</section>
 		<section class="tsd-panel-group tsd-index-group">
 			<h2>Index</h2>
 			<section class="tsd-panel tsd-index-panel">
 				<div class="tsd-index-content">
-					<section class="tsd-index-section tsd-is-not-exported">
-						<h3>Enumeration members</h3>
+					<section class="tsd-index-section ">
+						<h3>Constructors</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported"><a href="tokentype.html#number" class="tsd-kind-icon">Number</a></li>
-							<li class="tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported"><a href="tokentype.html#operation" class="tsd-kind-icon">Operation</a></li>
-							<li class="tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported"><a href="tokentype.html#other" class="tsd-kind-icon">Other</a></li>
-							<li class="tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported"><a href="tokentype.html#variable" class="tsd-kind-icon">Variable</a></li>
+							<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="functionsgraph.html#constructor" class="tsd-kind-icon">constructor</a></li>
+						</ul>
+					</section>
+					<section class="tsd-index-section ">
+						<h3>Properties</h3>
+						<ul class="tsd-index-list">
+							<li class="tsd-kind-property tsd-parent-kind-class"><a href="functionsgraph.html#container" class="tsd-kind-icon">Container</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-class"><a href="functionsgraph.html#functions" class="tsd-kind-icon">Functions</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-class"><a href="functionsgraph.html#graphdrawer" class="tsd-kind-icon">Graph<wbr>Drawer</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-class"><a href="functionsgraph.html#pixelspervaluebase" class="tsd-kind-icon">Pixels<wbr>Per<wbr>Value<wbr>Base</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-class"><a href="functionsgraph.html#viewport" class="tsd-kind-icon">Viewport</a></li>
+						</ul>
+					</section>
+					<section class="tsd-index-section ">
+						<h3>Methods</h3>
+						<ul class="tsd-index-list">
+							<li class="tsd-kind-method tsd-parent-kind-class"><a href="functionsgraph.html#addfunction" class="tsd-kind-icon">Add<wbr>Function</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class"><a href="functionsgraph.html#draw" class="tsd-kind-icon">Draw</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class"><a href="functionsgraph.html#removefunction" class="tsd-kind-icon">Remove<wbr>Function</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class"><a href="functionsgraph.html#setcontainer" class="tsd-kind-icon">Set<wbr>Container</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class"><a href="functionsgraph.html#setevaluationboundaries" class="tsd-kind-icon">Set<wbr>Evaluation<wbr>Boundaries</a></li>
 						</ul>
 					</section>
 				</div>
 			</section>
 		</section>
-		<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
-			<h2>Enumeration members</h2>
-			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported">
-				<a name="number" class="tsd-anchor"></a>
-				<h3>Number</h3>
-				<div class="tsd-signature tsd-kind-icon">Number<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;0</span></div>
+		<section class="tsd-panel-group tsd-member-group ">
+			<h2>Constructors</h2>
+			<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+				<a name="constructor" class="tsd-anchor"></a>
+				<h3>constructor</h3>
+				<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+					<li class="tsd-signature tsd-kind-icon">new <wbr>Functions<wbr>Graph<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="functionsgraph.html" class="tsd-signature-type">FunctionsGraph</a></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/aivaras-ciurlionis/math-chart/blob/75d7e67/src/lib/graph-manger/functions-graph.ts#L15">lib/graph-manger/functions-graph.ts:15</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-returns-title">Returns <a href="functionsgraph.html" class="tsd-signature-type">FunctionsGraph</a></h4>
+					</li>
+				</ul>
+			</section>
+		</section>
+		<section class="tsd-panel-group tsd-member-group ">
+			<h2>Properties</h2>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+				<a name="container" class="tsd-anchor"></a>
+				<h3>Container</h3>
+				<div class="tsd-signature tsd-kind-icon">Container<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/aivaras-ciurlionis/math-chart/blob/75d7e67/src/lib/models/Token.ts#L4">lib/models/Token.ts:4</a></li>
+						<li>Defined in <a href="https://github.com/aivaras-ciurlionis/math-chart/blob/75d7e67/src/lib/graph-manger/functions-graph.ts#L13">lib/graph-manger/functions-graph.ts:13</a></li>
 					</ul>
 				</aside>
 			</section>
-			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported">
-				<a name="operation" class="tsd-anchor"></a>
-				<h3>Operation</h3>
-				<div class="tsd-signature tsd-kind-icon">Operation<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;1</span></div>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+				<a name="functions" class="tsd-anchor"></a>
+				<h3>Functions</h3>
+				<div class="tsd-signature tsd-kind-icon">Functions<span class="tsd-signature-symbol">:</span> <a href="mathfuncions.html" class="tsd-signature-type">MathFuncions</a></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/aivaras-ciurlionis/math-chart/blob/75d7e67/src/lib/models/Token.ts#L5">lib/models/Token.ts:5</a></li>
+						<li>Defined in <a href="https://github.com/aivaras-ciurlionis/math-chart/blob/75d7e67/src/lib/graph-manger/functions-graph.ts#L10">lib/graph-manger/functions-graph.ts:10</a></li>
 					</ul>
 				</aside>
 			</section>
-			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported">
-				<a name="other" class="tsd-anchor"></a>
-				<h3>Other</h3>
-				<div class="tsd-signature tsd-kind-icon">Other<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;3</span></div>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+				<a name="graphdrawer" class="tsd-anchor"></a>
+				<h3>Graph<wbr>Drawer</h3>
+				<div class="tsd-signature tsd-kind-icon">Graph<wbr>Drawer<span class="tsd-signature-symbol">:</span> <a href="graphdrawer.html" class="tsd-signature-type">GraphDrawer</a></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/aivaras-ciurlionis/math-chart/blob/75d7e67/src/lib/models/Token.ts#L7">lib/models/Token.ts:7</a></li>
+						<li>Defined in <a href="https://github.com/aivaras-ciurlionis/math-chart/blob/75d7e67/src/lib/graph-manger/functions-graph.ts#L11">lib/graph-manger/functions-graph.ts:11</a></li>
 					</ul>
 				</aside>
 			</section>
-			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported">
-				<a name="variable" class="tsd-anchor"></a>
-				<h3>Variable</h3>
-				<div class="tsd-signature tsd-kind-icon">Variable<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;2</span></div>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+				<a name="pixelspervaluebase" class="tsd-anchor"></a>
+				<h3>Pixels<wbr>Per<wbr>Value<wbr>Base</h3>
+				<div class="tsd-signature tsd-kind-icon">Pixels<wbr>Per<wbr>Value<wbr>Base<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;50</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/aivaras-ciurlionis/math-chart/blob/75d7e67/src/lib/models/Token.ts#L6">lib/models/Token.ts:6</a></li>
+						<li>Defined in <a href="https://github.com/aivaras-ciurlionis/math-chart/blob/75d7e67/src/lib/graph-manger/functions-graph.ts#L15">lib/graph-manger/functions-graph.ts:15</a></li>
 					</ul>
 				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+				<a name="viewport" class="tsd-anchor"></a>
+				<h3>Viewport</h3>
+				<div class="tsd-signature tsd-kind-icon">Viewport<span class="tsd-signature-symbol">:</span> <a href="viewport.html" class="tsd-signature-type">Viewport</a></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/aivaras-ciurlionis/math-chart/blob/75d7e67/src/lib/graph-manger/functions-graph.ts#L12">lib/graph-manger/functions-graph.ts:12</a></li>
+					</ul>
+				</aside>
+			</section>
+		</section>
+		<section class="tsd-panel-group tsd-member-group ">
+			<h2>Methods</h2>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<a name="addfunction" class="tsd-anchor"></a>
+				<h3>Add<wbr>Function</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<li class="tsd-signature tsd-kind-icon">Add<wbr>Function<span class="tsd-signature-symbol">(</span>functionExpression<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<p>Implementation of <a href="../interfaces/ifunctionmanager.html">IFunctionManager</a>.<a href="../interfaces/ifunctionmanager.html#addfunction">AddFunction</a></p>
+							<ul>
+								<li>Defined in <a href="https://github.com/aivaras-ciurlionis/math-chart/blob/75d7e67/src/lib/graph-manger/functions-graph.ts#L35">lib/graph-manger/functions-graph.ts:35</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Adds a new function to a graph</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>functionExpression: <span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>String function expression</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<a name="draw" class="tsd-anchor"></a>
+				<h3>Draw</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<li class="tsd-signature tsd-kind-icon">Draw<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/aivaras-ciurlionis/math-chart/blob/75d7e67/src/lib/graph-manger/functions-graph.ts#L62">lib/graph-manger/functions-graph.ts:62</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Redraws graph with all visible functions</p>
+							</div>
+						</div>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<a name="removefunction" class="tsd-anchor"></a>
+				<h3>Remove<wbr>Function</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<li class="tsd-signature tsd-kind-icon">Remove<wbr>Function<span class="tsd-signature-symbol">(</span>index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<p>Implementation of <a href="../interfaces/ifunctionmanager.html">IFunctionManager</a>.<a href="../interfaces/ifunctionmanager.html#removefunction">RemoveFunction</a></p>
+							<ul>
+								<li>Defined in <a href="https://github.com/aivaras-ciurlionis/math-chart/blob/75d7e67/src/lib/graph-manger/functions-graph.ts#L44">lib/graph-manger/functions-graph.ts:44</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Removes a function from a graph by index</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>index: <span class="tsd-signature-type">number</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>Function index to remove</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<a name="setcontainer" class="tsd-anchor"></a>
+				<h3>Set<wbr>Container</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<li class="tsd-signature tsd-kind-icon">Set<wbr>Container<span class="tsd-signature-symbol">(</span>container<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/aivaras-ciurlionis/math-chart/blob/75d7e67/src/lib/graph-manger/functions-graph.ts#L27">lib/graph-manger/functions-graph.ts:27</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Sets a container for a graph</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>container: <span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>Id of html container</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<a name="setevaluationboundaries" class="tsd-anchor"></a>
+				<h3>Set<wbr>Evaluation<wbr>Boundaries</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<li class="tsd-signature tsd-kind-icon">Set<wbr>Evaluation<wbr>Boundaries<span class="tsd-signature-symbol">(</span>start<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, step<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, count<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<p>Implementation of <a href="../interfaces/ifunctionmanager.html">IFunctionManager</a>.<a href="../interfaces/ifunctionmanager.html#setevaluationboundaries">SetEvaluationBoundaries</a></p>
+							<ul>
+								<li>Defined in <a href="https://github.com/aivaras-ciurlionis/math-chart/blob/75d7e67/src/lib/graph-manger/functions-graph.ts#L55">lib/graph-manger/functions-graph.ts:55</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Sets evaluation boundaries for all functions</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>start: <span class="tsd-signature-type">number</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>Function evaluation start</p>
+								</div>
+							</li>
+							<li>
+								<h5>step: <span class="tsd-signature-type">number</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>Function evaluation step</p>
+								</div>
+							</li>
+							<li>
+								<h5>count: <span class="tsd-signature-type">number</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>Evaluation step count</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+					</li>
+				</ul>
 			</section>
 		</section>
 		<footer class="with-border-bottom">

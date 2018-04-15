@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>TokenType | math-chart</title>
+	<title>MathFuncions | math-chart</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style type="text/css">/*! normalize.css v1.1.3 | MIT License | git.io/normalize */
@@ -909,20 +909,44 @@ img { max-width: 100%; }
 </header>
 <nav class="tsd-navigation secondary">
 	<ul>
-		<li class="current tsd-kind-enum tsd-is-not-exported">
-			<a href="tokentype.html" class="tsd-kind-icon">Token<wbr>Type</a>
+		<li class="current tsd-kind-class">
+			<a href="mathfuncions.html" class="tsd-kind-icon">Math<wbr>Funcions</a>
 			<ul>
-				<li class=" tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported">
-					<a href="tokentype.html#number" class="tsd-kind-icon">Number</a>
+				<li class=" tsd-kind-constructor tsd-parent-kind-class">
+					<a href="mathfuncions.html#constructor" class="tsd-kind-icon">constructor</a>
 				</li>
-				<li class=" tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported">
-					<a href="tokentype.html#operation" class="tsd-kind-icon">Operation</a>
+				<li class=" tsd-kind-property tsd-parent-kind-class">
+					<a href="mathfuncions.html#evaluationcount" class="tsd-kind-icon">Evaluation<wbr>Count</a>
 				</li>
-				<li class=" tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported">
-					<a href="tokentype.html#other" class="tsd-kind-icon">Other</a>
+				<li class=" tsd-kind-property tsd-parent-kind-class">
+					<a href="mathfuncions.html#evaluationstart" class="tsd-kind-icon">Evaluation<wbr>Start</a>
 				</li>
-				<li class=" tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported">
-					<a href="tokentype.html#variable" class="tsd-kind-icon">Variable</a>
+				<li class=" tsd-kind-property tsd-parent-kind-class">
+					<a href="mathfuncions.html#evaluationstep" class="tsd-kind-icon">Evaluation<wbr>Step</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-class">
+					<a href="mathfuncions.html#functions" class="tsd-kind-icon">Functions</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-class">
+					<a href="mathfuncions.html#interpreter" class="tsd-kind-icon">interpreter</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class">
+					<a href="mathfuncions.html#addfunction" class="tsd-kind-icon">Add<wbr>Function</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class">
+					<a href="mathfuncions.html#evaluatefunction" class="tsd-kind-icon">Evaluate<wbr>Function</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class">
+					<a href="mathfuncions.html#evaluatefunctionat" class="tsd-kind-icon">Evaluate<wbr>Function<wbr>At</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class">
+					<a href="mathfuncions.html#evaluatefunctions" class="tsd-kind-icon">Evaluate<wbr>Functions</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class">
+					<a href="mathfuncions.html#removefunction" class="tsd-kind-icon">Remove<wbr>Function</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class">
+					<a href="mathfuncions.html#setevaluationboundaries" class="tsd-kind-icon">Set<wbr>Evaluation<wbr>Boundaries</a>
 				</li>
 			</ul>
 		</li>
@@ -930,63 +954,358 @@ img { max-width: 100%; }
 </nav>
 <div class="container container-main">
 	<div class="content-wrap">
+		<section class="tsd-panel tsd-comment">
+			<div class="tsd-comment tsd-typography">
+				<div class="lead">
+					<p>Class that manages function values in a graph</p>
+				</div>
+			</div>
+		</section>
+		<section class="tsd-panel tsd-hierarchy">
+			<h3>Hierarchy</h3>
+			<ul class="tsd-hierarchy">
+				<li>
+					<span class="target">MathFuncions</span>
+				</li>
+			</ul>
+		</section>
+		<section class="tsd-panel">
+			<h3>Implements</h3>
+			<ul class="tsd-hierarchy">
+				<li><a href="../interfaces/ifunctionmanager.html" class="tsd-signature-type">IFunctionManager</a></li>
+			</ul>
+		</section>
 		<section class="tsd-panel-group tsd-index-group">
 			<h2>Index</h2>
 			<section class="tsd-panel tsd-index-panel">
 				<div class="tsd-index-content">
-					<section class="tsd-index-section tsd-is-not-exported">
-						<h3>Enumeration members</h3>
+					<section class="tsd-index-section ">
+						<h3>Constructors</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported"><a href="tokentype.html#number" class="tsd-kind-icon">Number</a></li>
-							<li class="tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported"><a href="tokentype.html#operation" class="tsd-kind-icon">Operation</a></li>
-							<li class="tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported"><a href="tokentype.html#other" class="tsd-kind-icon">Other</a></li>
-							<li class="tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported"><a href="tokentype.html#variable" class="tsd-kind-icon">Variable</a></li>
+							<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="mathfuncions.html#constructor" class="tsd-kind-icon">constructor</a></li>
+						</ul>
+					</section>
+					<section class="tsd-index-section ">
+						<h3>Properties</h3>
+						<ul class="tsd-index-list">
+							<li class="tsd-kind-property tsd-parent-kind-class"><a href="mathfuncions.html#evaluationcount" class="tsd-kind-icon">Evaluation<wbr>Count</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-class"><a href="mathfuncions.html#evaluationstart" class="tsd-kind-icon">Evaluation<wbr>Start</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-class"><a href="mathfuncions.html#evaluationstep" class="tsd-kind-icon">Evaluation<wbr>Step</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-class"><a href="mathfuncions.html#functions" class="tsd-kind-icon">Functions</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-class"><a href="mathfuncions.html#interpreter" class="tsd-kind-icon">interpreter</a></li>
+						</ul>
+					</section>
+					<section class="tsd-index-section ">
+						<h3>Methods</h3>
+						<ul class="tsd-index-list">
+							<li class="tsd-kind-method tsd-parent-kind-class"><a href="mathfuncions.html#addfunction" class="tsd-kind-icon">Add<wbr>Function</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class"><a href="mathfuncions.html#evaluatefunction" class="tsd-kind-icon">Evaluate<wbr>Function</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class"><a href="mathfuncions.html#evaluatefunctionat" class="tsd-kind-icon">Evaluate<wbr>Function<wbr>At</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class"><a href="mathfuncions.html#evaluatefunctions" class="tsd-kind-icon">Evaluate<wbr>Functions</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class"><a href="mathfuncions.html#removefunction" class="tsd-kind-icon">Remove<wbr>Function</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class"><a href="mathfuncions.html#setevaluationboundaries" class="tsd-kind-icon">Set<wbr>Evaluation<wbr>Boundaries</a></li>
 						</ul>
 					</section>
 				</div>
 			</section>
 		</section>
-		<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
-			<h2>Enumeration members</h2>
-			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported">
-				<a name="number" class="tsd-anchor"></a>
-				<h3>Number</h3>
-				<div class="tsd-signature tsd-kind-icon">Number<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;0</span></div>
+		<section class="tsd-panel-group tsd-member-group ">
+			<h2>Constructors</h2>
+			<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+				<a name="constructor" class="tsd-anchor"></a>
+				<h3>constructor</h3>
+				<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+					<li class="tsd-signature tsd-kind-icon">new <wbr>Math<wbr>Funcions<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="mathfuncions.html" class="tsd-signature-type">MathFuncions</a></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/aivaras-ciurlionis/math-chart/blob/75d7e67/src/lib/functions-manager/math-functions.ts#L52">lib/functions-manager/math-functions.ts:52</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-returns-title">Returns <a href="mathfuncions.html" class="tsd-signature-type">MathFuncions</a></h4>
+					</li>
+				</ul>
+			</section>
+		</section>
+		<section class="tsd-panel-group tsd-member-group ">
+			<h2>Properties</h2>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+				<a name="evaluationcount" class="tsd-anchor"></a>
+				<h3>Evaluation<wbr>Count</h3>
+				<div class="tsd-signature tsd-kind-icon">Evaluation<wbr>Count<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/aivaras-ciurlionis/math-chart/blob/75d7e67/src/lib/models/Token.ts#L4">lib/models/Token.ts:4</a></li>
+						<li>Defined in <a href="https://github.com/aivaras-ciurlionis/math-chart/blob/75d7e67/src/lib/functions-manager/math-functions.ts#L52">lib/functions-manager/math-functions.ts:52</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Number of evaluation steps</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+				<a name="evaluationstart" class="tsd-anchor"></a>
+				<h3>Evaluation<wbr>Start</h3>
+				<div class="tsd-signature tsd-kind-icon">Evaluation<wbr>Start<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/aivaras-ciurlionis/math-chart/blob/75d7e67/src/lib/functions-manager/math-functions.ts#L44">lib/functions-manager/math-functions.ts:44</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>x value at which start evaluations</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+				<a name="evaluationstep" class="tsd-anchor"></a>
+				<h3>Evaluation<wbr>Step</h3>
+				<div class="tsd-signature tsd-kind-icon">Evaluation<wbr>Step<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/aivaras-ciurlionis/math-chart/blob/75d7e67/src/lib/functions-manager/math-functions.ts#L48">lib/functions-manager/math-functions.ts:48</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Functions evaluation step value</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+				<a name="functions" class="tsd-anchor"></a>
+				<h3>Functions</h3>
+				<div class="tsd-signature tsd-kind-icon">Functions<span class="tsd-signature-symbol">:</span> <a href="graphfunction.html" class="tsd-signature-type">GraphFunction</a><span class="tsd-signature-symbol">[]</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/aivaras-ciurlionis/math-chart/blob/75d7e67/src/lib/functions-manager/math-functions.ts#L40">lib/functions-manager/math-functions.ts:40</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Original parsed expressions</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+				<a name="interpreter" class="tsd-anchor"></a>
+				<h3>interpreter</h3>
+				<div class="tsd-signature tsd-kind-icon">interpreter<span class="tsd-signature-symbol">:</span> <a href="../interfaces/iinterpreter.html" class="tsd-signature-type">IInterpreter</a></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/aivaras-ciurlionis/math-chart/blob/75d7e67/src/lib/functions-manager/math-functions.ts#L35">lib/functions-manager/math-functions.ts:35</a></li>
 					</ul>
 				</aside>
 			</section>
-			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported">
-				<a name="operation" class="tsd-anchor"></a>
-				<h3>Operation</h3>
-				<div class="tsd-signature tsd-kind-icon">Operation<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;1</span></div>
-				<aside class="tsd-sources">
-					<ul>
-						<li>Defined in <a href="https://github.com/aivaras-ciurlionis/math-chart/blob/75d7e67/src/lib/models/Token.ts#L5">lib/models/Token.ts:5</a></li>
-					</ul>
-				</aside>
+		</section>
+		<section class="tsd-panel-group tsd-member-group ">
+			<h2>Methods</h2>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<a name="addfunction" class="tsd-anchor"></a>
+				<h3>Add<wbr>Function</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<li class="tsd-signature tsd-kind-icon">Add<wbr>Function<span class="tsd-signature-symbol">(</span>functionExpression<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<p>Implementation of <a href="../interfaces/ifunctionmanager.html">IFunctionManager</a>.<a href="../interfaces/ifunctionmanager.html#addfunction">AddFunction</a></p>
+							<ul>
+								<li>Defined in <a href="https://github.com/aivaras-ciurlionis/math-chart/blob/75d7e67/src/lib/functions-manager/math-functions.ts#L62">lib/functions-manager/math-functions.ts:62</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Adds a new function to a graph</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>functionExpression: <span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>String function expression</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+					</li>
+				</ul>
 			</section>
-			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported">
-				<a name="other" class="tsd-anchor"></a>
-				<h3>Other</h3>
-				<div class="tsd-signature tsd-kind-icon">Other<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;3</span></div>
-				<aside class="tsd-sources">
-					<ul>
-						<li>Defined in <a href="https://github.com/aivaras-ciurlionis/math-chart/blob/75d7e67/src/lib/models/Token.ts#L7">lib/models/Token.ts:7</a></li>
-					</ul>
-				</aside>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<a name="evaluatefunction" class="tsd-anchor"></a>
+				<h3>Evaluate<wbr>Function</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<li class="tsd-signature tsd-kind-icon">Evaluate<wbr>Function<span class="tsd-signature-symbol">(</span>fx<span class="tsd-signature-symbol">: </span><a href="../interfaces/iexpression.html" class="tsd-signature-type">IExpression</a>, fxString<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="functionevaluationresult.html" class="tsd-signature-type">FunctionEvaluationResult</a></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/aivaras-ciurlionis/math-chart/blob/75d7e67/src/lib/functions-manager/math-functions.ts#L111">lib/functions-manager/math-functions.ts:111</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Evaluates a function in a current evaluation boundary</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>fx: <a href="../interfaces/iexpression.html" class="tsd-signature-type">IExpression</a></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>Function expression</p>
+								</div>
+							</li>
+							<li>
+								<h5>fxString: <span class="tsd-signature-type">string</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <a href="functionevaluationresult.html" class="tsd-signature-type">FunctionEvaluationResult</a></h4>
+						<p>Function evaluation result</p>
+					</li>
+				</ul>
 			</section>
-			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported">
-				<a name="variable" class="tsd-anchor"></a>
-				<h3>Variable</h3>
-				<div class="tsd-signature tsd-kind-icon">Variable<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;2</span></div>
-				<aside class="tsd-sources">
-					<ul>
-						<li>Defined in <a href="https://github.com/aivaras-ciurlionis/math-chart/blob/75d7e67/src/lib/models/Token.ts#L6">lib/models/Token.ts:6</a></li>
-					</ul>
-				</aside>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<a name="evaluatefunctionat" class="tsd-anchor"></a>
+				<h3>Evaluate<wbr>Function<wbr>At</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<li class="tsd-signature tsd-kind-icon">Evaluate<wbr>Function<wbr>At<span class="tsd-signature-symbol">(</span>fx<span class="tsd-signature-symbol">: </span><a href="../interfaces/iexpression.html" class="tsd-signature-type">IExpression</a>, x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="functionstepevaluationresult.html" class="tsd-signature-type">FunctionStepEvaluationResult</a></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/aivaras-ciurlionis/math-chart/blob/75d7e67/src/lib/functions-manager/math-functions.ts#L95">lib/functions-manager/math-functions.ts:95</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Evaluates given function value at a given result</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>fx: <a href="../interfaces/iexpression.html" class="tsd-signature-type">IExpression</a></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>Function expression</p>
+								</div>
+							</li>
+							<li>
+								<h5>x: <span class="tsd-signature-type">number</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>Evaluation point</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <a href="functionstepevaluationresult.html" class="tsd-signature-type">FunctionStepEvaluationResult</a></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<a name="evaluatefunctions" class="tsd-anchor"></a>
+				<h3>Evaluate<wbr>Functions</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<li class="tsd-signature tsd-kind-icon">Evaluate<wbr>Functions<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="functionevaluationresult.html" class="tsd-signature-type">FunctionEvaluationResult</a><span class="tsd-signature-symbol">[]</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/aivaras-ciurlionis/math-chart/blob/75d7e67/src/lib/functions-manager/math-functions.ts#L126">lib/functions-manager/math-functions.ts:126</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Evaluates all current functions if they are visible</p>
+							</div>
+						</div>
+						<h4 class="tsd-returns-title">Returns <a href="functionevaluationresult.html" class="tsd-signature-type">FunctionEvaluationResult</a><span class="tsd-signature-symbol">[]</span></h4>
+						<p>Array of function evaluation results</p>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<a name="removefunction" class="tsd-anchor"></a>
+				<h3>Remove<wbr>Function</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<li class="tsd-signature tsd-kind-icon">Remove<wbr>Function<span class="tsd-signature-symbol">(</span>index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<p>Implementation of <a href="../interfaces/ifunctionmanager.html">IFunctionManager</a>.<a href="../interfaces/ifunctionmanager.html#removefunction">RemoveFunction</a></p>
+							<ul>
+								<li>Defined in <a href="https://github.com/aivaras-ciurlionis/math-chart/blob/75d7e67/src/lib/functions-manager/math-functions.ts#L74">lib/functions-manager/math-functions.ts:74</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Removes a function from a graph by index</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>index: <span class="tsd-signature-type">number</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>Function index to remove</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<a name="setevaluationboundaries" class="tsd-anchor"></a>
+				<h3>Set<wbr>Evaluation<wbr>Boundaries</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<li class="tsd-signature tsd-kind-icon">Set<wbr>Evaluation<wbr>Boundaries<span class="tsd-signature-symbol">(</span>start<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, step<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, count<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<p>Implementation of <a href="../interfaces/ifunctionmanager.html">IFunctionManager</a>.<a href="../interfaces/ifunctionmanager.html#setevaluationboundaries">SetEvaluationBoundaries</a></p>
+							<ul>
+								<li>Defined in <a href="https://github.com/aivaras-ciurlionis/math-chart/blob/75d7e67/src/lib/functions-manager/math-functions.ts#L84">lib/functions-manager/math-functions.ts:84</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Sets evaluation boundaries for all functions</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>start: <span class="tsd-signature-type">number</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>Function evaluation start</p>
+								</div>
+							</li>
+							<li>
+								<h5>step: <span class="tsd-signature-type">number</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>Function evaluation step</p>
+								</div>
+							</li>
+							<li>
+								<h5>count: <span class="tsd-signature-type">number</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>Evaluation step count</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+					</li>
+				</ul>
 			</section>
 		</section>
 		<footer class="with-border-bottom">
