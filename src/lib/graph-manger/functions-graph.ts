@@ -66,4 +66,4 @@ class FunctionsGraph implements IFunctionManager {
 
 }
 
-export default FunctionsGraph;
+export { FunctionsGraph };
