@@ -52,7 +52,7 @@ class GraphDrawer {
 
   DrawLabel(ctx: CanvasRenderingContext2D, value: string, x: number, y: number): void {
     if (this.Settings.drawGridLabels) {
-      ctx.font = '10px serif';
+      ctx.font = '14px serif';
       ctx.fillText(value, x, y);
     }
   }
@@ -88,7 +88,7 @@ class GraphDrawer {
         ctx.setLineDash([]);
       }
       if (gridValue.label) {
-        this.DrawLabel(ctx, y.toString(), pixelsY, baseX + 5);
+        this.DrawLabel(ctx, y.toString(), baseX + 5, pixelsY);
       }
       ctx.lineWidth = Math.abs(y) < 0.001 ? 2 : gridValue.width;
       ctx.moveTo(0, pixelsY);
@@ -119,7 +119,7 @@ class GraphDrawer {
 
     // Draw horizontal grid
     const startingPointY = this.GetNearestValidPoint(viewport.StartY);
-    const startingOffsetY = (startingPointY - viewport.StartY) * pixelsPerValue;
+    const startingOffsetY = context.Height - (startingPointY - viewport.StartY) * pixelsPerValue;
     let currentPixelsY = startingOffsetY;
     let currentY = startingPointY;
 
