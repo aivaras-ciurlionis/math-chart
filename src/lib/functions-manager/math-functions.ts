@@ -37,7 +37,7 @@ class MathFuncions implements IFunctionManager {
   /**
    * Original parsed expressions
    */
-  Functions: GraphFunction[];
+  Functions: GraphFunction[] = [];
   /**
    * x value at which start evaluations
    */
