@@ -1,7 +1,7 @@
 class Viewport {
     constructor(x: number, y: number, scale: number) {
         this.StartX = x;
-        this.StartX = y;
+        this.StartY = y;
         this.Scale = scale;
     }
     Scale: number;

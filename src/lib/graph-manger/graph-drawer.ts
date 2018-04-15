@@ -9,7 +9,7 @@ const minStep = 0.25;
  * Class that performs functions drawing in graph
  */
 const prepareCanvas = (container: any): CanvasContext => {
-  let canvas = <HTMLCanvasElement> document.getElementById(`${container}`);
+  let canvas = <HTMLCanvasElement>document.getElementById(`${container}`);
   let context = canvas.getContext('2d');
   context.moveTo(0, 0);
   const canvasContext = new CanvasContext();
@@ -50,20 +50,47 @@ class GraphDrawer {
     return Math.ceil(scale) * minStep;
   }
 
-  TryDrawVertical(ctx: any, settings: any, pixelsX: number, x: number, height: number) {
-    let gridValue = settings.find((s:any) => x % s.unit < 0.0001);
+  DrawLabel(ctx: CanvasRenderingContext2D, value: string, x: number, y: number): void {
+    if (this.Settings.drawGridLabels) {
+      ctx.font = '10px serif';
+      ctx.fillText(value, x, y);
+    }
+  }
+
+  TryDrawVertical(ctx: CanvasRenderingContext2D, settings: GridWidthSetting,
+    pixelsX: number, x: number, height: number, baseY: number) {
+    let gridValue = settings.GridWidths.find((s: any) => Math.abs(x % s.unit) < 0.0001);
     if (gridValue) {
-      ctx.lineWidth = gridValue.width;
+      ctx.beginPath();
+      if (gridValue.dash) {
+        ctx.setLineDash([5]);
+      } else {
+        ctx.setLineDash([]);
+      }
+      if (gridValue.label) {
+        this.DrawLabel(ctx, x.toString(), pixelsX, baseY + 5);
+      }
+      ctx.lineWidth = Math.abs(x) < 0.001 ? 2 : gridValue.width;
       ctx.moveTo(pixelsX, 0);
       ctx.lineTo(pixelsX, height);
       ctx.stroke();
     }
   }
 
-  TryDrawHorizontal(ctx: any, settings: GridWidthSetting, pixelsY: number, y: number, width: number) {
-    let gridValue = settings.GridWidths.find(s => y % s.unit < 0.0001);
+  TryDrawHorizontal(ctx: CanvasRenderingContext2D, settings: GridWidthSetting,
+    pixelsY: number, y: number, width: number, baseX: number) {
+    let gridValue = settings.GridWidths.find(s => Math.abs(y % s.unit) < 0.0001);
     if (gridValue) {
-      ctx.lineWidth = gridValue.width;
+      ctx.beginPath();
+      if (gridValue.dash) {
+        ctx.setLineDash([5]);
+      } else {
+        ctx.setLineDash([]);
+      }
+      if (gridValue.label) {
+        this.DrawLabel(ctx, y.toString(), pixelsY, baseX + 5);
+      }
+      ctx.lineWidth = Math.abs(y) < 0.001 ? 2 : gridValue.width;
       ctx.moveTo(0, pixelsY);
       ctx.lineTo(width, pixelsY);
       ctx.stroke();
@@ -72,31 +99,34 @@ class GraphDrawer {
 
   DrawGrid(viewport: Viewport, pixelsPerValue: number, context: CanvasContext) {
     let ctx = context.Context;
-    ctx.fillStyle = this.Settings.gridColor;
+    ctx.strokeStyle = this.Settings.gridColor;
     const startingPointX = this.GetNearestValidPoint(viewport.StartX);
     const startingOffsetX = (startingPointX - viewport.StartX) * pixelsPerValue;
     const adjustedPixelsPerValue = pixelsPerValue * minStep;
     let currentPixelsX = startingOffsetX;
     let currentX = startingPointX;
-    const scaleSettings = this.Settings.gridWidths.find(s => s.Scale < viewport.Scale);
+    const scaleSettings = this.Settings.gridWidths.find(s => s.Scale <= viewport.Scale);
+
+    const baseY = context.Height + viewport.StartY * pixelsPerValue;
+    const baseX = -viewport.StartX * pixelsPerValue;
 
     // Draw vertical grid
     while (currentPixelsX < context.Width) {
-      this.TryDrawVertical(ctx, scaleSettings, currentPixelsX, currentX, context.Height);
+      this.TryDrawVertical(ctx, scaleSettings, currentPixelsX, currentX, context.Height, baseY);
       currentPixelsX += adjustedPixelsPerValue;
       currentX += minStep;
     }
 
+    // Draw horizontal grid
     const startingPointY = this.GetNearestValidPoint(viewport.StartY);
     const startingOffsetY = (startingPointY - viewport.StartY) * pixelsPerValue;
     let currentPixelsY = startingOffsetY;
     let currentY = startingPointY;
 
-    // Draw horizontal grid
     while (currentPixelsY > 0) {
-      this.TryDrawHorizontal(ctx, scaleSettings, currentPixelsY, currentY, context.Width);
+      this.TryDrawHorizontal(ctx, scaleSettings, currentPixelsY, currentY, context.Width, baseX);
       currentPixelsY -= adjustedPixelsPerValue;
-      currentY -= minStep;
+      currentY += minStep;
     }
   }
 

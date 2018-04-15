@@ -1,7 +1,7 @@
 class CanvasContext {
     Width: number;
     Height: number;
-    Context: any;
+    Context: CanvasRenderingContext2D;
 };
 
 export default CanvasContext;
