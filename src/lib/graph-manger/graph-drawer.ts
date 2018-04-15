@@ -9,7 +9,7 @@ const minStep = 0.25;
  * Class that performs functions drawing in graph
  */
 const prepareCanvas = (container: any): CanvasContext => {
-  let canvas = document.getElementById(`${container}`);
+  let canvas = <HTMLCanvasElement> document.getElementById(`${container}`);
   let context = canvas.getContext('2d');
   context.moveTo(0, 0);
   const canvasContext = new CanvasContext();
@@ -42,6 +42,7 @@ class GraphDrawer {
     if (this.Settings.drawGrid) {
       this.DrawGrid(viewport, pixelsPerValueBase * viewport.Scale, context);
     }
+    functions = [];
   }
 
   GetNearestValidPoint(value: number): number {

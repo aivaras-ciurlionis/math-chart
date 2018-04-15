@@ -23,7 +23,7 @@ interface IFunctionManager {
    * @param step Function evaluation step
    * @param count Evaluation step count
    */
-  SetEvaluationBoundaries(start: number, step: number, count: number);
+  SetEvaluationBoundaries(start: number, step: number, count: number): void;
 }
 
 /**
@@ -136,5 +136,5 @@ class MathFuncions implements IFunctionManager {
 
 }
 
-export default MathFuncions;
 export { IFunctionManager };
+export default MathFuncions;
