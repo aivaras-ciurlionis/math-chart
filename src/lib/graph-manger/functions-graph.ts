@@ -75,8 +75,8 @@ class FunctionsGraph implements IFunctionManager {
       const dx = e.x - this.startX;
       const dy = e.y - this.startY;
       this.SetViewport(
-        this.Viewport.StartX + dx / this.PixelsPerValueBase * this.Viewport.Scale,
-        this.Viewport.StartY -= dy / this.PixelsPerValueBase * this.Viewport.Scale,
+        this.Viewport.StartX -= dx / this.PixelsPerValueBase * this.Viewport.Scale,
+        this.Viewport.StartY += dy / this.PixelsPerValueBase * this.Viewport.Scale,
         this.Viewport.Scale
       );
       this.startX = e.x;
@@ -101,7 +101,7 @@ class FunctionsGraph implements IFunctionManager {
     if (event.deltaY < 0) {
       scale *= 1.05;
     } else {
-      scale -= 1.05;
+      scale /= 1.05;
     }
     this.SetViewport(
       this.Viewport.StartX,
