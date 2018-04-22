@@ -22,7 +22,7 @@ class MultiplyExpression extends BaseExpression {
   }
 
   Clone() : IExpression {
-    return new MultiplyExpression(this.Operands[0], this.Operands[1]);
+    return new MultiplyExpression(this.Operands[0].Clone(), this.Operands[1].Clone());
   }
 
 }

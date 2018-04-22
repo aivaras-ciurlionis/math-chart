@@ -22,7 +22,7 @@ class ParenthesisExpression extends BaseExpression {
   }
 
   Clone() : IExpression {
-    return new ParenthesisExpression(this.Operands[0]);
+    return new ParenthesisExpression(this.Operands[0].Clone());
   }
 
 }

@@ -22,7 +22,7 @@ class SubtractExpression extends BaseExpression {
   }
 
   Clone() : IExpression {
-    return new SubtractExpression(this.Operands[0], this.Operands[1]);
+    return new SubtractExpression(this.Operands[0].Clone(), this.Operands[1].Clone());
   }
 
 }

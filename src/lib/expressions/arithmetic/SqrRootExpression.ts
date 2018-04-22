@@ -22,7 +22,7 @@ class SqrRootExpression extends BaseExpression {
   }
 
   Clone() : IExpression {
-    return new SqrRootExpression(this.Operands[0]);
+    return new SqrRootExpression(this.Operands[0].Clone());
   }
 
 }

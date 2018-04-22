@@ -22,7 +22,7 @@ class ExponentExpression extends BaseExpression {
   }
 
   Clone() : IExpression {
-    return new ExponentExpression(this.Operands[0], this.Operands[1]);
+    return new ExponentExpression(this.Operands[0].Clone(), this.Operands[1].Clone());
   }
 
 }

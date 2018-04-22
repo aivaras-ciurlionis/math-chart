@@ -265,9 +265,9 @@ map-obj@^1.0.0, map-obj@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/map-obj/-/map-obj-1.0.1.tgz#d933ceb9205d82bdcf4886f6742bdc2b4dea146d"
 
-math-chart@^0.0.18:
-  version "0.0.18"
-  resolved "https://registry.yarnpkg.com/math-chart/-/math-chart-0.0.18.tgz#0c2327fff5a06abef7c0d6a1e4200555bc9d8dd5"
+math-chart@^0.0.19:
+  version "0.0.19"
+  resolved "https://registry.yarnpkg.com/math-chart/-/math-chart-0.0.19.tgz#50a9141d9dd1c5725053d08dde46b247819db8ff"
   dependencies:
     tslib "^1.6.0"
 

@@ -22,7 +22,7 @@ class NegationExpression extends BaseExpression {
   }
 
   Clone() : IExpression {
-    return new NegationExpression(this.Operands[0]);
+    return new NegationExpression(this.Operands[0].Clone());
   }
 
 }

@@ -22,7 +22,7 @@ class DivisionExpression extends BaseExpression {
   }
 
   Clone(): IExpression {
-    return new DivisionExpression(this.Operands[0], this.Operands[1]);
+    return new DivisionExpression(this.Operands[0].Clone(), this.Operands[1].Clone());
   }
 
 }

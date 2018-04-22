@@ -22,7 +22,7 @@ class SumExpression extends BaseExpression {
   }
 
   Clone() : IExpression {
-    return new SumExpression(this.Operands[0], this.Operands[1]);
+    return new SumExpression(this.Operands[0].Clone(), this.Operands[1].Clone());
   }
 
 }
