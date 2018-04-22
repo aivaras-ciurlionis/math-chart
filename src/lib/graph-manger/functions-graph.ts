@@ -46,7 +46,7 @@ class FunctionsGraph implements IFunctionManager {
     const canvas = document.getElementById(container);
     const wheelEvt = 'onwheel' in document.createElement('div') ? 'wheel' :
       document.onmousewheel !== undefined ? 'mousewheel' : 'DOMMouseScroll';
-    canvas.addEventListener(wheelEvt, this.ProcessResize);
+    canvas.addEventListener(wheelEvt, this.ProcessResize.bind(this));
   }
 
   /**
@@ -64,7 +64,6 @@ class FunctionsGraph implements IFunctionManager {
    */
   private ProcessMouseUp = (): void => {
     this.dragging = false;
-
   }
 
   /**
@@ -86,9 +85,9 @@ class FunctionsGraph implements IFunctionManager {
 
   InitMove(container: string): void {
     const canvas = document.getElementById(container);
-    canvas.addEventListener('onmousedown', this.ProcessMouseDown);
-    canvas.addEventListener('onmousemove', this.ProcessMouseMove);
-    canvas.addEventListener('onmouseup', this.ProcessMouseUp);
+    canvas.addEventListener('onmousedown', this.ProcessMouseDown.bind(this));
+    canvas.addEventListener('onmousemove', this.ProcessMouseMove.bind(this));
+    canvas.addEventListener('onmouseup', this.ProcessMouseUp.bind(this));
   }
 
   /**
