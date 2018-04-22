@@ -19,7 +19,7 @@ class GridWidthSetting {
 }
 
 class LabelSetting {
-  constructor(value: number, scale: number) {
+  constructor(scale: number, value: number) {
     this.Value = value;
     this.Scale = scale;
   }

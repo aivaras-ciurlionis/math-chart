@@ -15,7 +15,7 @@
     "typescript": "^2.2.0"
   },
   "dependencies": {
-    "math-chart": "^0.0.14"
+    "math-chart": "^0.0.16"
   },
   "private": true
 }

@@ -78,7 +78,7 @@ export default class LabelDrawer {
    */
   TryDrawYLabel(ctx: CanvasRenderingContext2D, setting: LabelSetting,
     pixelsY: number, y: number, baseX: number): void {
-    if (Math.abs(y % setting.Value) < 0.001) {
+    if (Math.abs(y % setting.Value) < 0.001 && Math.abs(y) > 0.01) {
       ctx.font = this.settings.labelFont;
       ctx.fillText(y.toString(), baseX + 5, pixelsY);
     }
