@@ -28,8 +28,8 @@ class GraphDrawer {
    * @param pixelsPerValueBase How many pixels per single value for a scale of 1
    */
   Draw(context: CanvasContext, functions: FunctionEvaluationResult[], viewport: Viewport, pixelsPerValueBase: number) {
+    context.Context.clearRect(0, 0, context.Width, context.Height);
     const scaledPixelsPerValue = pixelsPerValueBase * viewport.Scale;
-
     const gridDrawer = new GridDrawer(viewport, this.Settings, context);
     const labelDrawer = new LabelDrawer(viewport, this.Settings, context);
     const functionsDrawer = new FunctionsDrawer(viewport, context, this.Settings, scaledPixelsPerValue);

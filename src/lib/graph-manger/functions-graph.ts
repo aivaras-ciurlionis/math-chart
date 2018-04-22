@@ -74,20 +74,22 @@ class FunctionsGraph implements IFunctionManager {
     if (this.dragging) {
       const dx = e.x - this.startX;
       const dy = e.y - this.startY;
-      this.Viewport.StartX += dx / this.PixelsPerValueBase * this.Viewport.Scale;
-      this.Viewport.StartY -= dy / this.PixelsPerValueBase * this.Viewport.Scale;
-      this.startX = dx;
-      this.startY = dy;
+      this.SetViewport(
+        this.Viewport.StartX + dx / this.PixelsPerValueBase * this.Viewport.Scale,
+        this.Viewport.StartY -= dy / this.PixelsPerValueBase * this.Viewport.Scale,
+        this.Viewport.Scale
+      );
+      this.startX = e.x;
+      this.startY = e.y;
       this.Draw();
     }
   }
 
-
   InitMove(container: string): void {
     const canvas = document.getElementById(container);
-    canvas.addEventListener('onmousedown', this.ProcessMouseDown.bind(this));
-    canvas.addEventListener('onmousemove', this.ProcessMouseMove.bind(this));
-    canvas.addEventListener('onmouseup', this.ProcessMouseUp.bind(this));
+    canvas.addEventListener('mousedown', this.ProcessMouseDown.bind(this));
+    canvas.addEventListener('mousemove', this.ProcessMouseMove.bind(this));
+    canvas.addEventListener('mouseup', this.ProcessMouseUp.bind(this));
   }
 
   /**
@@ -95,11 +97,17 @@ class FunctionsGraph implements IFunctionManager {
    * @param event Mouse wheel event
    */
   ProcessResize(event: MouseWheelEvent): void {
+    let scale = this.Viewport.Scale;
     if (event.deltaY < 0) {
-      this.Viewport.Scale *= 1.5;
+      scale *= 1.05;
     } else {
-      this.Viewport.Scale -= 1.5;
+      scale -= 1.05;
     }
+    this.SetViewport(
+      this.Viewport.StartX,
+      this.Viewport.StartY,
+      scale
+    );
     this.Draw();
   }
 

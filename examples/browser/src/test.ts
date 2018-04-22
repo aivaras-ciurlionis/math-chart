@@ -10,8 +10,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
     graph.SetContainer('testCanvas');
     graph.SetViewport(-5, -5, 1);
     graph.AddFunction('x^2');
-    graph.AddFunction('x^3');
-    graph.AddFunction('-x^2');
 
     graph.Draw();
 });
