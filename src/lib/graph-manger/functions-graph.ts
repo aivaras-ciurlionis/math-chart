@@ -53,7 +53,7 @@ class FunctionsGraph implements IFunctionManager {
    * Initializes dragging
    * @param e Mouse event
    */
-  private ProcessMouseDown(e: MouseEvent): void {
+  private ProcessMouseDown = (e: MouseEvent): void => {
     this.dragging = true;
     this.startX = e.x;
     this.startY = e.y;
@@ -62,7 +62,7 @@ class FunctionsGraph implements IFunctionManager {
   /**
    * Stops dragging
    */
-  private ProcessMouseUp(): void {
+  private ProcessMouseUp = (): void => {
     this.dragging = false;
 
   }
@@ -71,7 +71,7 @@ class FunctionsGraph implements IFunctionManager {
    * Processes graph dragging
    * @param e Mouse event
    */
-  private ProcessMouseMove(e: MouseEvent): void {
+  private ProcessMouseMove = (e: MouseEvent): void => {
     if (this.dragging) {
       const dx = e.x - this.startX;
       const dy = e.y - this.startY;
@@ -95,7 +95,7 @@ class FunctionsGraph implements IFunctionManager {
    * Processes graph resize event by increasing/decreasing scale
    * @param event Mouse wheel event
    */
-  ProcessResize(event: MouseWheelEvent): void {
+  ProcessResize = (event: MouseWheelEvent): void => {
     if (event.deltaY < 0) {
       this.Viewport.Scale *= 1.5;
     } else {
