@@ -4,7 +4,8 @@
   "license": "MIT",
   "scripts": {
     "start": "http-server -c-1 ./build/ -o",
-    "build": "rollup -c && cpy src/index.html build/"
+    "build": "rollup -c && cpy src/index.html build/",
+    "go": "yarn install && yarn build && yarn start"
   },
   "devDependencies": {
     "cpy-cli": "^1.0.1",
@@ -15,7 +16,7 @@
     "typescript": "^2.2.0"
   },
   "dependencies": {
-    "math-chart": "^0.0.17"
+    "math-chart": "^0.0.18"
   },
   "private": true
 }

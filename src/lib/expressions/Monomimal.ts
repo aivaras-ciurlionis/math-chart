@@ -48,9 +48,17 @@ class Monomial implements IExpression {
     return new Monomial(variablesProduct * this.Coefficient);
   }
 
+  CloneVarialbes(): Variable[] {
+    const variables: Variable[] = [];
+    this.Variables.forEach(v => {
+      variables.push(new Variable(v.Name, v.Exponent));
+    });
+    return variables;
+  }
+
   Clone(): IExpression {
     var monomial = new Monomial(this.Coefficient);
-    monomial.SetVariables(this.Variables);
+    monomial.SetVariables(this.CloneVarialbes());
     return monomial;
   }
 
