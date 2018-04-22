@@ -46,14 +46,14 @@ class GraphSettings {
     this.gridWidths = [
       new GridWidthSetting(2, [new GridWidth(1, 1), new GridWidth(0.25, 0.5, true)]),
       new GridWidthSetting(0.2, [new GridWidth(5, 1), new GridWidth(1, 1, true)]),
-      new GridWidthSetting(0.04, [new GridWidth(20, 2), new GridWidth(5, 1)]),
-      new GridWidthSetting(Number.EPSILON, [new GridWidth(100, 2), new GridWidth(20, 1)])
+      new GridWidthSetting(0.1, [new GridWidth(20, 2), new GridWidth(5, 1)]),
+      new GridWidthSetting(Number.EPSILON, [new GridWidth(50, 2), new GridWidth(10, 1)])
     ]
     this.labelDisplay = [
       new LabelSetting(2, 1),
       new LabelSetting(0.2, 1),
-      new LabelSetting(0.04, 5),
-      new LabelSetting(Number.EPSILON, 100)
+      new LabelSetting(0.1, 5),
+      new LabelSetting(Number.EPSILON, 10)
     ]
   }
   canResize: boolean;

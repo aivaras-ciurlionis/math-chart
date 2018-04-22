@@ -97,16 +97,16 @@ class FunctionsGraph implements IFunctionManager {
    * @param event Mouse wheel event
    */
   ProcessResize(event: MouseWheelEvent): void {
-    let scale = this.Viewport.Scale;
+    let scale = 1;
     if (event.deltaY < 0) {
-      scale *= 1.05;
+      scale = 1.05;
     } else {
-      scale /= 1.05;
+      scale = 0.95;
     }
     this.SetViewport(
-      this.Viewport.StartX,
-      this.Viewport.StartY,
-      scale
+      this.Viewport.StartX * scale,
+      this.Viewport.StartY * scale,
+      this.Viewport.Scale * scale
     );
     this.Draw();
   }
