@@ -8,8 +8,11 @@ window.interpreter = interpreter;
 document.addEventListener("DOMContentLoaded", function (event) {
     let graph = new FunctionsGraph();
     graph.SetContainer('testCanvas');
-    graph.SetViewport(0, -5, 1);
-    graph.AddFunction('sqrt(x)');
+    graph.SetViewport(-5, -5, 1);
+    graph.AddFunction('x^2');
+    graph.AddFunction('x^3');
+    graph.AddFunction('-x^2');
+
     graph.Draw();
 });
 
