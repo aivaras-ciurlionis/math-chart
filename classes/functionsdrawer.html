@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>GraphDrawParameters | math-chart</title>
+	<title>FunctionsDrawer | math-chart</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style type="text/css">/*! normalize.css v1.1.3 | MIT License | git.io/normalize */
@@ -910,31 +910,19 @@ img { max-width: 100%; }
 <nav class="tsd-navigation secondary">
 	<ul>
 		<li class="current tsd-kind-class">
-			<a href="graphdrawparameters.html" class="tsd-kind-icon">Graph<wbr>Draw<wbr>Parameters</a>
+			<a href="functionsdrawer.html" class="tsd-kind-icon">Functions<wbr>Drawer</a>
 			<ul>
 				<li class=" tsd-kind-constructor tsd-parent-kind-class">
-					<a href="graphdrawparameters.html#constructor" class="tsd-kind-icon">constructor</a>
+					<a href="functionsdrawer.html#constructor" class="tsd-kind-icon">constructor</a>
 				</li>
 				<li class=" tsd-kind-property tsd-parent-kind-class">
-					<a href="graphdrawparameters.html#adjustedpixelspervalue" class="tsd-kind-icon">Adjusted<wbr>Pixels<wbr>Per<wbr>Value</a>
+					<a href="functionsdrawer.html#graphparameters" class="tsd-kind-icon">Graph<wbr>Parameters</a>
 				</li>
-				<li class=" tsd-kind-property tsd-parent-kind-class">
-					<a href="graphdrawparameters.html#basex" class="tsd-kind-icon">BaseX</a>
+				<li class=" tsd-kind-method tsd-parent-kind-class">
+					<a href="functionsdrawer.html#drawfunction" class="tsd-kind-icon">Draw<wbr>Function</a>
 				</li>
-				<li class=" tsd-kind-property tsd-parent-kind-class">
-					<a href="graphdrawparameters.html#basey" class="tsd-kind-icon">BaseY</a>
-				</li>
-				<li class=" tsd-kind-property tsd-parent-kind-class">
-					<a href="graphdrawparameters.html#startingoffsetx" class="tsd-kind-icon">Starting<wbr>OffsetX</a>
-				</li>
-				<li class=" tsd-kind-property tsd-parent-kind-class">
-					<a href="graphdrawparameters.html#startingoffsety" class="tsd-kind-icon">Starting<wbr>OffsetY</a>
-				</li>
-				<li class=" tsd-kind-property tsd-parent-kind-class">
-					<a href="graphdrawparameters.html#startingpointx" class="tsd-kind-icon">Starting<wbr>PointX</a>
-				</li>
-				<li class=" tsd-kind-property tsd-parent-kind-class">
-					<a href="graphdrawparameters.html#startingpointy" class="tsd-kind-icon">Starting<wbr>PointY</a>
+				<li class=" tsd-kind-method tsd-parent-kind-class">
+					<a href="functionsdrawer.html#drawfunctions" class="tsd-kind-icon">Draw<wbr>Functions</a>
 				</li>
 			</ul>
 		</li>
@@ -945,7 +933,7 @@ img { max-width: 100%; }
 		<section class="tsd-panel tsd-comment">
 			<div class="tsd-comment tsd-typography">
 				<div class="lead">
-					<p>Holds variables required for drawing a graph</p>
+					<p>Manages drawing of functions in a graph</p>
 				</div>
 			</div>
 		</section>
@@ -953,7 +941,7 @@ img { max-width: 100%; }
 			<h3>Hierarchy</h3>
 			<ul class="tsd-hierarchy">
 				<li>
-					<span class="target">GraphDrawParameters</span>
+					<span class="target">FunctionsDrawer</span>
 				</li>
 			</ul>
 		</section>
@@ -964,19 +952,20 @@ img { max-width: 100%; }
 					<section class="tsd-index-section ">
 						<h3>Constructors</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="graphdrawparameters.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="functionsdrawer.html#constructor" class="tsd-kind-icon">constructor</a></li>
 						</ul>
 					</section>
 					<section class="tsd-index-section ">
 						<h3>Properties</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-property tsd-parent-kind-class"><a href="graphdrawparameters.html#adjustedpixelspervalue" class="tsd-kind-icon">Adjusted<wbr>Pixels<wbr>Per<wbr>Value</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-class"><a href="graphdrawparameters.html#basex" class="tsd-kind-icon">BaseX</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-class"><a href="graphdrawparameters.html#basey" class="tsd-kind-icon">BaseY</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-class"><a href="graphdrawparameters.html#startingoffsetx" class="tsd-kind-icon">Starting<wbr>OffsetX</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-class"><a href="graphdrawparameters.html#startingoffsety" class="tsd-kind-icon">Starting<wbr>OffsetY</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-class"><a href="graphdrawparameters.html#startingpointx" class="tsd-kind-icon">Starting<wbr>PointX</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-class"><a href="graphdrawparameters.html#startingpointy" class="tsd-kind-icon">Starting<wbr>PointY</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-class"><a href="functionsdrawer.html#graphparameters" class="tsd-kind-icon">Graph<wbr>Parameters</a></li>
+						</ul>
+					</section>
+					<section class="tsd-index-section ">
+						<h3>Methods</h3>
+						<ul class="tsd-index-list">
+							<li class="tsd-kind-method tsd-parent-kind-class"><a href="functionsdrawer.html#drawfunction" class="tsd-kind-icon">Draw<wbr>Function</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class"><a href="functionsdrawer.html#drawfunctions" class="tsd-kind-icon">Draw<wbr>Functions</a></li>
 						</ul>
 					</section>
 				</div>
@@ -988,40 +977,31 @@ img { max-width: 100%; }
 				<a name="constructor" class="tsd-anchor"></a>
 				<h3>constructor</h3>
 				<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-					<li class="tsd-signature tsd-kind-icon">new <wbr>Graph<wbr>Draw<wbr>Parameters<span class="tsd-signature-symbol">(</span>startingPointX<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, startingOffsetX<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, adjustedPixelsPerValue<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, startingPointY<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, startingOffsetY<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, baseX<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, baseY<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="graphdrawparameters.html" class="tsd-signature-type">GraphDrawParameters</a></li>
+					<li class="tsd-signature tsd-kind-icon">new <wbr>Functions<wbr>Drawer<span class="tsd-signature-symbol">(</span>viewport<span class="tsd-signature-symbol">: </span><a href="viewport.html" class="tsd-signature-type">Viewport</a>, canvasContext<span class="tsd-signature-symbol">: </span><a href="canvascontext.html" class="tsd-signature-type">CanvasContext</a>, graphSettings<span class="tsd-signature-symbol">: </span><a href="graphsettings.html" class="tsd-signature-type">GraphSettings</a>, pixelsPerValue<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="functionsdrawer.html" class="tsd-signature-type">FunctionsDrawer</a></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/aivaras-ciurlionis/math-chart/blob/1667aa5/src/lib/graph-manger/graph-draw-parameters.ts#L7">lib/graph-manger/graph-draw-parameters.ts:7</a></li>
+								<li>Defined in <a href="https://github.com/aivaras-ciurlionis/math-chart/blob/1667aa5/src/lib/graph-manger/functions-drawer.ts#L12">lib/graph-manger/functions-drawer.ts:12</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
 							<li>
-								<h5>startingPointX: <span class="tsd-signature-type">number</span></h5>
+								<h5>viewport: <a href="viewport.html" class="tsd-signature-type">Viewport</a></h5>
 							</li>
 							<li>
-								<h5>startingOffsetX: <span class="tsd-signature-type">number</span></h5>
+								<h5>canvasContext: <a href="canvascontext.html" class="tsd-signature-type">CanvasContext</a></h5>
 							</li>
 							<li>
-								<h5>adjustedPixelsPerValue: <span class="tsd-signature-type">number</span></h5>
+								<h5>graphSettings: <a href="graphsettings.html" class="tsd-signature-type">GraphSettings</a></h5>
 							</li>
 							<li>
-								<h5>startingPointY: <span class="tsd-signature-type">number</span></h5>
-							</li>
-							<li>
-								<h5>startingOffsetY: <span class="tsd-signature-type">number</span></h5>
-							</li>
-							<li>
-								<h5>baseX: <span class="tsd-signature-type">number</span></h5>
-							</li>
-							<li>
-								<h5>baseY: <span class="tsd-signature-type">number</span></h5>
+								<h5>pixelsPerValue: <span class="tsd-signature-type">number</span></h5>
 							</li>
 						</ul>
-						<h4 class="tsd-returns-title">Returns <a href="graphdrawparameters.html" class="tsd-signature-type">GraphDrawParameters</a></h4>
+						<h4 class="tsd-returns-title">Returns <a href="functionsdrawer.html" class="tsd-signature-type">FunctionsDrawer</a></h4>
 					</li>
 				</ul>
 			</section>
@@ -1029,74 +1009,85 @@ img { max-width: 100%; }
 		<section class="tsd-panel-group tsd-member-group ">
 			<h2>Properties</h2>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-				<a name="adjustedpixelspervalue" class="tsd-anchor"></a>
-				<h3>Adjusted<wbr>Pixels<wbr>Per<wbr>Value</h3>
-				<div class="tsd-signature tsd-kind-icon">Adjusted<wbr>Pixels<wbr>Per<wbr>Value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<a name="graphparameters" class="tsd-anchor"></a>
+				<h3>Graph<wbr>Parameters</h3>
+				<div class="tsd-signature tsd-kind-icon">Graph<wbr>Parameters<span class="tsd-signature-symbol">:</span> <a href="graphdrawparameters.html" class="tsd-signature-type">GraphDrawParameters</a></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/aivaras-ciurlionis/math-chart/blob/1667aa5/src/lib/graph-manger/graph-draw-parameters.ts#L27">lib/graph-manger/graph-draw-parameters.ts:27</a></li>
+						<li>Defined in <a href="https://github.com/aivaras-ciurlionis/math-chart/blob/1667aa5/src/lib/graph-manger/functions-drawer.ts#L12">lib/graph-manger/functions-drawer.ts:12</a></li>
 					</ul>
 				</aside>
 			</section>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-				<a name="basex" class="tsd-anchor"></a>
-				<h3>BaseX</h3>
-				<div class="tsd-signature tsd-kind-icon">BaseX<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-				<aside class="tsd-sources">
-					<ul>
-						<li>Defined in <a href="https://github.com/aivaras-ciurlionis/math-chart/blob/1667aa5/src/lib/graph-manger/graph-draw-parameters.ts#L30">lib/graph-manger/graph-draw-parameters.ts:30</a></li>
-					</ul>
-				</aside>
+		</section>
+		<section class="tsd-panel-group tsd-member-group ">
+			<h2>Methods</h2>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<a name="drawfunction" class="tsd-anchor"></a>
+				<h3>Draw<wbr>Function</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<li class="tsd-signature tsd-kind-icon">Draw<wbr>Function<span class="tsd-signature-symbol">(</span>evaluatedFunction<span class="tsd-signature-symbol">: </span><a href="functionevaluationresult.html" class="tsd-signature-type">FunctionEvaluationResult</a>, index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/aivaras-ciurlionis/math-chart/blob/1667aa5/src/lib/graph-manger/functions-drawer.ts#L40">lib/graph-manger/functions-drawer.ts:40</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Draws a single function in a graph</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>evaluatedFunction: <a href="functionevaluationresult.html" class="tsd-signature-type">FunctionEvaluationResult</a></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>Function</p>
+								</div>
+							</li>
+							<li>
+								<h5>index: <span class="tsd-signature-type">number</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>Index of a function</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+					</li>
+				</ul>
 			</section>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-				<a name="basey" class="tsd-anchor"></a>
-				<h3>BaseY</h3>
-				<div class="tsd-signature tsd-kind-icon">BaseY<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-				<aside class="tsd-sources">
-					<ul>
-						<li>Defined in <a href="https://github.com/aivaras-ciurlionis/math-chart/blob/1667aa5/src/lib/graph-manger/graph-draw-parameters.ts#L31">lib/graph-manger/graph-draw-parameters.ts:31</a></li>
-					</ul>
-				</aside>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-				<a name="startingoffsetx" class="tsd-anchor"></a>
-				<h3>Starting<wbr>OffsetX</h3>
-				<div class="tsd-signature tsd-kind-icon">Starting<wbr>OffsetX<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-				<aside class="tsd-sources">
-					<ul>
-						<li>Defined in <a href="https://github.com/aivaras-ciurlionis/math-chart/blob/1667aa5/src/lib/graph-manger/graph-draw-parameters.ts#L26">lib/graph-manger/graph-draw-parameters.ts:26</a></li>
-					</ul>
-				</aside>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-				<a name="startingoffsety" class="tsd-anchor"></a>
-				<h3>Starting<wbr>OffsetY</h3>
-				<div class="tsd-signature tsd-kind-icon">Starting<wbr>OffsetY<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-				<aside class="tsd-sources">
-					<ul>
-						<li>Defined in <a href="https://github.com/aivaras-ciurlionis/math-chart/blob/1667aa5/src/lib/graph-manger/graph-draw-parameters.ts#L29">lib/graph-manger/graph-draw-parameters.ts:29</a></li>
-					</ul>
-				</aside>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-				<a name="startingpointx" class="tsd-anchor"></a>
-				<h3>Starting<wbr>PointX</h3>
-				<div class="tsd-signature tsd-kind-icon">Starting<wbr>PointX<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-				<aside class="tsd-sources">
-					<ul>
-						<li>Defined in <a href="https://github.com/aivaras-ciurlionis/math-chart/blob/1667aa5/src/lib/graph-manger/graph-draw-parameters.ts#L25">lib/graph-manger/graph-draw-parameters.ts:25</a></li>
-					</ul>
-				</aside>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-				<a name="startingpointy" class="tsd-anchor"></a>
-				<h3>Starting<wbr>PointY</h3>
-				<div class="tsd-signature tsd-kind-icon">Starting<wbr>PointY<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-				<aside class="tsd-sources">
-					<ul>
-						<li>Defined in <a href="https://github.com/aivaras-ciurlionis/math-chart/blob/1667aa5/src/lib/graph-manger/graph-draw-parameters.ts#L28">lib/graph-manger/graph-draw-parameters.ts:28</a></li>
-					</ul>
-				</aside>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<a name="drawfunctions" class="tsd-anchor"></a>
+				<h3>Draw<wbr>Functions</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<li class="tsd-signature tsd-kind-icon">Draw<wbr>Functions<span class="tsd-signature-symbol">(</span>functions<span class="tsd-signature-symbol">: </span><a href="functionevaluationresult.html" class="tsd-signature-type">FunctionEvaluationResult</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/aivaras-ciurlionis/math-chart/blob/1667aa5/src/lib/graph-manger/functions-drawer.ts#L31">lib/graph-manger/functions-drawer.ts:31</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Draws given functions in a graph</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>functions: <a href="functionevaluationresult.html" class="tsd-signature-type">FunctionEvaluationResult</a><span class="tsd-signature-symbol">[]</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>Functions to draws</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+					</li>
+				</ul>
 			</section>
 		</section>
 		<footer class="with-border-bottom">
