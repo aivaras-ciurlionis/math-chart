@@ -75,8 +75,8 @@ class FunctionsGraph implements IFunctionManager {
       const dx = e.x - this.startX;
       const dy = e.y - this.startY;
       this.SetViewport(
-        this.Viewport.StartX -= dx / this.PixelsPerValueBase * this.Viewport.Scale,
-        this.Viewport.StartY += dy / this.PixelsPerValueBase * this.Viewport.Scale,
+        this.Viewport.StartX -= dx / (this.PixelsPerValueBase * this.Viewport.Scale),
+        this.Viewport.StartY += dy / (this.PixelsPerValueBase * this.Viewport.Scale),
         this.Viewport.Scale
       );
       this.startX = e.x;
