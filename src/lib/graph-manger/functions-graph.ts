@@ -24,13 +24,13 @@ class FunctionsGraph implements IFunctionManager {
   GraphDrawer: GraphDrawer;
   Viewport: Viewport;
   Container: string;
+  Context: CanvasContext;
 
   PixelsPerValueBase = 50;
 
   constructor() {
     this.Functions = new MathFuncions();
     this.GraphDrawer = new GraphDrawer();
-    this.SetViewport(-5, -5, 1);
   }
 
   /**
@@ -39,6 +39,7 @@ class FunctionsGraph implements IFunctionManager {
    */
   SetContainer(container: string) {
     this.Container = container;
+    this.Context = prepareCanvas(this.Container);
   }
 
   /**
@@ -76,9 +77,8 @@ class FunctionsGraph implements IFunctionManager {
    * @param scale Scale
    */
   SetViewport(startX: number, startY: number, scale: number = 1) {
-    const context = prepareCanvas(this.Container);
     this.Viewport = new Viewport(startX, startY, scale);
-    this.SetEvaluationBoundaries(startX, 0.1, (context.Width / (this.PixelsPerValueBase * scale)) * 10);
+    this.SetEvaluationBoundaries(startX, 0.1, (this.Context.Width / (this.PixelsPerValueBase * scale)) * 10);
   }
 
   /**
@@ -86,7 +86,7 @@ class FunctionsGraph implements IFunctionManager {
    */
   Draw(): void {
     const evaluation = this.Functions.EvaluateFunctions();
-    this.GraphDrawer.Draw(this.Container, evaluation, this.Viewport, this.PixelsPerValueBase);
+    this.GraphDrawer.Draw(this.Context, evaluation, this.Viewport, this.PixelsPerValueBase);
   }
 
 }

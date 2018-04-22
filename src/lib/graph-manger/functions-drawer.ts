@@ -40,6 +40,7 @@ export default class FunctionsDrawer {
   DrawFunction(evaluatedFunction: FunctionEvaluationResult, index: number): void {
     const ctx = this.canvasContext.Context;
     ctx.strokeStyle = this.graphSettings.functionColors[index];
+    ctx.setLineDash([]);
     const results = evaluatedFunction.Results;
     for (var i = 0; i < results.length - 1; i++) {
       if (results[i].isDefined && results[i + 1].isDefined) {
