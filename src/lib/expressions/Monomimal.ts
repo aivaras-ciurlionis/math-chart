@@ -40,7 +40,7 @@ class Monomial implements IExpression {
     let variablesProduct = 1;
     if (this.Variables.length > 0) {
       this.Variables.forEach(variable => {
-        if (replacementDictionary[variable.Name]) {
+        if (replacementDictionary[variable.Name] !== undefined) {
           variablesProduct *= variable.Evaluate(replacementDictionary[variable.Name]);
         }
       });

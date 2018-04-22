@@ -35,6 +35,8 @@ class GraphSettings {
     this.labelColor = params.labelColor || '#000';
     this.drawGridLabels = params.drawGridLabels || true;
     this.labelFont = params.labelFont || '14px serif';
+    this.canResize = params.canResize || true;
+    this.canMove = params.canMove || true;
     this.functionColors = params.functionColors || [
       '#4286f4',
       '#f44141',
@@ -43,7 +45,9 @@ class GraphSettings {
     ]
     this.gridWidths = [
       new GridWidthSetting(5, [new GridWidth(1, 1), new GridWidth(0.25, 0.5, true)]),
-      new GridWidthSetting(1, [new GridWidth(5, 1), new GridWidth(1, 1, true)])
+      new GridWidthSetting(1, [new GridWidth(5, 1), new GridWidth(1, 1, true)]),
+      new GridWidthSetting(0.2, [new GridWidth(20, 2), new GridWidth(5, 1)]),
+      new GridWidthSetting(0.04, [new GridWidth(100, 2), new GridWidth(20, 1)])
     ]
     this.labelDisplay = [
       new LabelSetting(5, 1),
@@ -52,6 +56,8 @@ class GraphSettings {
       new LabelSetting(0.04, 10)
     ]
   }
+  canResize: boolean;
+  canMove: boolean;
   drawGrid: boolean;
   drawGridLabels: boolean;
   drawFunctions: boolean;

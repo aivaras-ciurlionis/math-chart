@@ -26,11 +26,82 @@ class FunctionsGraph implements IFunctionManager {
   Container: string;
   Context: CanvasContext;
 
+  // Graph transform properties
+  dragging: boolean;
+  startX: number;
+  startY: number;
+
   PixelsPerValueBase = 50;
 
   constructor() {
     this.Functions = new MathFuncions();
     this.GraphDrawer = new GraphDrawer();
+  }
+
+  /**
+   * Initializes resize event listener on canvas
+   * @param container Canvas id
+   */
+  InitResize(container: string): void {
+    const canvas = document.getElementById(container);
+    const wheelEvt = 'onwheel' in document.createElement('div') ? 'wheel' :
+      document.onmousewheel !== undefined ? 'mousewheel' : 'DOMMouseScroll';
+    canvas.addEventListener(wheelEvt, this.ProcessResize);
+  }
+
+  /**
+   * Initializes dragging
+   * @param e Mouse event
+   */
+  private ProcessMouseDown(e: MouseEvent): void {
+    this.dragging = true;
+    this.startX = e.x;
+    this.startY = e.y;
+  }
+
+  /**
+   * Stops dragging
+   */
+  private ProcessMouseUp(): void {
+    this.dragging = false;
+
+  }
+
+  /**
+   * Processes graph dragging
+   * @param e Mouse event
+   */
+  private ProcessMouseMove(e: MouseEvent): void {
+    if (this.dragging) {
+      const dx = e.x - this.startX;
+      const dy = e.y - this.startY;
+      this.Viewport.StartX += dx / this.PixelsPerValueBase * this.Viewport.Scale;
+      this.Viewport.StartY -= dy / this.PixelsPerValueBase * this.Viewport.Scale;
+      this.startX = dx;
+      this.startY = dy;
+      this.Draw();
+    }
+  }
+
+
+  InitMove(container: string): void {
+    const canvas = document.getElementById(container);
+    canvas.addEventListener('onmousedown', this.ProcessMouseDown);
+    canvas.addEventListener('onmousemove', this.ProcessMouseMove);
+    canvas.addEventListener('onmouseup', this.ProcessMouseUp);
+  }
+
+  /**
+   * Processes graph resize event by increasing/decreasing scale
+   * @param event Mouse wheel event
+   */
+  ProcessResize(event: MouseWheelEvent): void {
+    if (event.deltaY < 0) {
+      this.Viewport.Scale *= 1.5;
+    } else {
+      this.Viewport.Scale -= 1.5;
+    }
+    this.Draw();
   }
 
   /**
@@ -40,6 +111,8 @@ class FunctionsGraph implements IFunctionManager {
   SetContainer(container: string) {
     this.Container = container;
     this.Context = prepareCanvas(this.Container);
+    this.InitResize(container);
+    this.InitMove(container);
   }
 
   /**
@@ -88,6 +161,9 @@ class FunctionsGraph implements IFunctionManager {
     const evaluation = this.Functions.EvaluateFunctions();
     this.GraphDrawer.Draw(this.Context, evaluation, this.Viewport, this.PixelsPerValueBase);
   }
+
+
+
 
 }
 
