@@ -8,6 +8,10 @@ import { DivisionExpression } from "./arithmetic/DivisionExpression";
 import { ExponentExpression } from "./arithmetic/ExponentExpression";
 import { ParenthesisExpression } from "./arithmetic/ParenthesisExpression";
 import { SqrRootExpression } from "./arithmetic/SqrRootExpression";
+import { SinExpression } from './arithmetic/SinExpression';
+import { CosExpression } from './arithmetic/CosExpression';
+import { TanExpression } from './arithmetic/TanExpression';
+import { LnExpression } from './arithmetic/LnExpression';
 
 interface IExpressionFactory {
   /**
@@ -71,6 +75,11 @@ class ExpressionFactory implements IExpressionFactory {
       case '^': return new ExponentExpression(operands[0], operands[1]);
       case '(': return new ParenthesisExpression(operands[0]);
       case 'sqrt': return new SqrRootExpression(operands[0]);
+      case 'sin': return new SinExpression(operands[0]);
+      case 'cos': return new CosExpression(operands[0]);
+      case 'tan': return new TanExpression(operands[0]);
+      case 'ln': return new LnExpression(operands[0]);
+      case 'lg': return new LnExpression(operands[0]);
       default: return null;
     }
   }
