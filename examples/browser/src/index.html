@@ -8,7 +8,11 @@
   <body>
 
     <div class="container">
+
       <h1>Math chart - component for mathematical functions charts</h1>
+      <div>
+          <canvas id="testCanvas" height="300" width="900"></canvas>
+        </div>
       <h2>1. Quick start</h2>
       <p>
         Install it using npm or yarn:
@@ -57,9 +61,6 @@
       <p>
         Graph can be panned using mouse and resized using mouse wheel.
       </p>
-      <div>
-        <canvas id="testCanvas" height="300" width="900"></canvas>
-      </div>
       <h2>2. Examples</h2>
       <div class="examples">
 
@@ -134,7 +135,7 @@
         <div class="example-holder">
           <div class="example-section">
             <label>
-              Draw graphs with multiple functions
+              Draw graph with multiple functions
             </label>
             <canvas id="graph2" height="300" width="400"></canvas>
           </div>
@@ -157,28 +158,25 @@
 
         <div class="example-holder">
           <div class="example-section">
+            <label>
+              Static graph
+            </label>
             <div class="code-block" style="margin-top: 80px">
               <p>
-                import { FunctionsGraph } from 'math-chart';<br>
-                let graph3 = new FunctionsGraph();<br>
-                graph3.SetContainer('graph3');<br>
-                graph3.SetViewport(0, 0, 1);<br>
-                graph3.AddFunction('x-3');<br>
-                graph3.AddFunction('-x-3');<br>
-                graph3.Draw();
+                  let graph3 = new FunctionsGraph({canResize: false, canMove: false});<br>
+                  graph3.SetContainer('graph3');<br>
+                  graph3.SetViewport(-1, -2, 1);<br>
+                  graph3.AddFunction('x-3');<br>
+                  graph3.AddFunction('-x+4');<br>
+                  graph3.Draw();
               </p>
             </div>
           </div>
           <div class="example-section">
-            <label>
-              Static graph
-            </label>
             <canvas id="graph3" height="300" width="400"></canvas>
           </div>
 
         </div>
-
-
 
 
       </div>

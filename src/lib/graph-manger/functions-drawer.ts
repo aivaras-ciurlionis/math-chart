@@ -44,6 +44,11 @@ export default class FunctionsDrawer {
     const results = evaluatedFunction.Results;
     for (var i = 0; i < results.length - 1; i++) {
       if (results[i].isDefined && results[i + 1].isDefined) {
+
+        if (Math.abs(results[i].y - results[i + 1].y) > 400) {
+          continue;
+        }
+
         ctx.beginPath();
 
         ctx.moveTo(

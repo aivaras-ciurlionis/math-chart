@@ -123,7 +123,7 @@ class FunctionsGraph implements IFunctionManager {
    * @param event Mouse wheel event
    */
   ProcessResize(event: MouseWheelEvent): void {
-    event.stopPropagation();
+    event.preventDefault();
     if (!this.Settings.canResize) {
       return;
     }
@@ -137,8 +137,8 @@ class FunctionsGraph implements IFunctionManager {
     let adb = this.PixelsPerValueBase * this.Viewport.Scale;
     let paramsComputor = new GraphDrawParametersComputor(this.Viewport, this.Context);
     let graphParameters = paramsComputor.GetParameters(adb);
-    const fixedEventX = event.x - this.Context.X;
-    const fixedEventY = event.y - this.Context.Y;
+    const fixedEventX = event.x - this.Context.X + window.scrollX;
+    const fixedEventY = event.y - this.Context.Y + window.scrollY;
     const currentX = (fixedEventX - graphParameters.BaseX) / adb;
     const currentY = -(fixedEventY - graphParameters.BaseY) / adb;
     const newViewport = new Viewport(this.Viewport.StartX, this.Viewport.StartY, this.Viewport.Scale * scale);
