@@ -3,6 +3,7 @@ import Viewport from "./viewport";
 import GraphDrawer from "./graph-drawer";
 import CanvasContext from './canvas-context';
 import GraphDrawParametersComputor from './graph-draw-parameters';
+import GraphSettings from './graph-settings';
 
 
 const prepareCanvas = (container: any): CanvasContext => {
@@ -29,6 +30,7 @@ class FunctionsGraph implements IFunctionManager {
   Viewport: Viewport;
   Container: string;
   Context: CanvasContext;
+  Settings: GraphSettings;
 
   // Graph transform properties
   dragging: boolean;
@@ -40,6 +42,7 @@ class FunctionsGraph implements IFunctionManager {
   constructor() {
     this.Functions = new MathFuncions();
     this.GraphDrawer = new GraphDrawer();
+    this.Settings = new GraphSettings({});
   }
 
   /**
@@ -47,6 +50,9 @@ class FunctionsGraph implements IFunctionManager {
    * @param container Canvas id
    */
   InitResize(container: string): void {
+    if (!this.Settings.canResize) {
+      return;
+    }
     const canvas = document.getElementById(container);
     const wheelEvt = 'onwheel' in document.createElement('div') ? 'wheel' :
       document.onmousewheel !== undefined ? 'mousewheel' : 'DOMMouseScroll';
@@ -90,6 +96,9 @@ class FunctionsGraph implements IFunctionManager {
   }
 
   InitMove(container: string): void {
+    if (!this.Settings.canMove) {
+      return;
+    }
     const canvas = document.getElementById(container);
     canvas.addEventListener('mousedown', this.ProcessMouseDown.bind(this));
     canvas.addEventListener('mousemove', this.ProcessMouseMove.bind(this));
@@ -123,7 +132,7 @@ class FunctionsGraph implements IFunctionManager {
     const newYC = -currentY * newadb + graphParameters.BaseY;
     const dx = (fixedEventX - newXC) / newadb;
     const dy = (fixedEventY - newYC) / newadb;
-    this.SetViewport(this.Viewport.StartX - dx, this.Viewport.StartY  + dy, this.Viewport.Scale * scale);
+    this.SetViewport(this.Viewport.StartX - dx, this.Viewport.StartY + dy, this.Viewport.Scale * scale);
     this.Draw();
   }
 
@@ -183,6 +192,15 @@ class FunctionsGraph implements IFunctionManager {
   Draw(): void {
     const evaluation = this.Functions.EvaluateFunctions();
     this.GraphDrawer.Draw(this.Context, evaluation, this.Viewport, this.PixelsPerValueBase);
+  }
+
+  /**
+   * Updates graph settings
+   * @param newSettings Settings replacement object
+   */
+  UpdateSettings(newSettings: any): void {
+    this.GraphDrawer.UpdateSettings(newSettings);
+    this.Settings = new GraphSettings(newSettings);
   }
 
 }
