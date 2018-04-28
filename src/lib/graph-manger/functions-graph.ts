@@ -2,6 +2,7 @@ import MathFuncions, { IFunctionManager } from "../functions-manager/math-functi
 import Viewport from "./viewport";
 import GraphDrawer from "./graph-drawer";
 import CanvasContext from './canvas-context';
+import GraphDrawParametersComputor from './graph-draw-parameters';
 
 
 const prepareCanvas = (container: any): CanvasContext => {
@@ -9,9 +10,12 @@ const prepareCanvas = (container: any): CanvasContext => {
   let context = canvas.getContext('2d');
   context.moveTo(0, 0);
   const canvasContext = new CanvasContext();
+  let rect = canvas.getBoundingClientRect();
   canvasContext.Context = context;
   canvasContext.Height = canvas.height;
   canvasContext.Width = canvas.width;
+  canvasContext.X = rect.left;
+  canvasContext.Y = rect.top;
   return canvasContext;
 }
 
@@ -103,11 +107,23 @@ class FunctionsGraph implements IFunctionManager {
     } else {
       scale = 0.95;
     }
-    let newX = this.Viewport.StartX * scale + event.x / this.PixelsPerValueBase * scale;
-    let newY = this.Viewport.StartY * scale - event.y / this.PixelsPerValueBase * scale;
-    this.SetViewport(
-      newX, newY, this.Viewport.Scale * scale
-    );
+    const newScale = this.Viewport.Scale * scale;
+    let adb = this.PixelsPerValueBase * this.Viewport.Scale;
+    let paramsComputor = new GraphDrawParametersComputor(this.Viewport, this.Context);
+    let graphParameters = paramsComputor.GetParameters(adb);
+    const fixedEventX = event.x - this.Context.X;
+    const fixedEventY = event.y - this.Context.Y;
+    const currentX = (fixedEventX - graphParameters.BaseX) / adb;
+    const currentY = -(fixedEventY - graphParameters.BaseY) / adb;
+    const newViewport = new Viewport(this.Viewport.StartX, this.Viewport.StartY, this.Viewport.Scale * scale);
+    paramsComputor = new GraphDrawParametersComputor(newViewport, this.Context);
+    const newadb = this.PixelsPerValueBase * newScale;
+    graphParameters = paramsComputor.GetParameters(newadb);
+    const newXC = currentX * newadb + graphParameters.BaseX;
+    const newYC = -currentY * newadb + graphParameters.BaseY;
+    const dx = (fixedEventX - newXC) / newadb;
+    const dy = (fixedEventY - newYC) / newadb;
+    this.SetViewport(this.Viewport.StartX - dx, this.Viewport.StartY  + dy, this.Viewport.Scale * scale);
     this.Draw();
   }
 
@@ -168,9 +184,6 @@ class FunctionsGraph implements IFunctionManager {
     const evaluation = this.Functions.EvaluateFunctions();
     this.GraphDrawer.Draw(this.Context, evaluation, this.Viewport, this.PixelsPerValueBase);
   }
-
-
-
 
 }
 
