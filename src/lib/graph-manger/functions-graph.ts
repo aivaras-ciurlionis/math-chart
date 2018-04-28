@@ -39,10 +39,14 @@ class FunctionsGraph implements IFunctionManager {
 
   PixelsPerValueBase = 50;
 
-  constructor() {
+  /**
+   * Initialize graph
+   * @param settings Initial graph settings
+   */
+  constructor(settings: any) {
     this.Functions = new MathFuncions();
     this.GraphDrawer = new GraphDrawer();
-    this.Settings = new GraphSettings({});
+    this.Settings = new GraphSettings(settings || {});
   }
 
   /**
@@ -64,6 +68,9 @@ class FunctionsGraph implements IFunctionManager {
    * @param e Mouse event
    */
   private ProcessMouseDown(e: MouseEvent): void {
+    if (!this.Settings.canMove) {
+      return;
+    }
     this.dragging = true;
     this.startX = e.x;
     this.startY = e.y;
@@ -73,6 +80,9 @@ class FunctionsGraph implements IFunctionManager {
    * Stops dragging
    */
   private ProcessMouseUp(): void {
+    if (!this.Settings.canMove) {
+      return;
+    }
     this.dragging = false;
   }
 
@@ -81,6 +91,9 @@ class FunctionsGraph implements IFunctionManager {
    * @param e Mouse event
    */
   private ProcessMouseMove(e: MouseEvent): void {
+    if (!this.Settings.canMove) {
+      return;
+    }
     if (this.dragging) {
       const dx = e.x - this.startX;
       const dy = e.y - this.startY;
@@ -110,6 +123,10 @@ class FunctionsGraph implements IFunctionManager {
    * @param event Mouse wheel event
    */
   ProcessResize(event: MouseWheelEvent): void {
+    event.stopPropagation();
+    if (!this.Settings.canResize) {
+      return;
+    }
     let scale = 1;
     if (event.deltaY < 0) {
       scale = 1.05;
