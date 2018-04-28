@@ -1,0 +1,52 @@
+h1{
+    text-align: center;
+}
+
+html,body{
+    width: 100%;
+}
+
+.container{
+    width: 900px;
+    margin: auto;
+}
+
+.code-block{
+    font-family: monospace;
+    background-color: #bbb;
+    padding: 10px 30px;
+    border-radius: 10px;
+}
+
+.code-block > pre {
+    margin: 0px;
+}
+
+.example-holder > div.example-section {
+    float: left;
+    width: 46%;
+    padding: 2px 1%;
+    min-height: 160px;
+}
+
+.example-holder{
+    float: left;
+    width: 100%;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    margin-top: 25px;
+}
+
+.example-section > label{
+    font-weight: 600;
+}
+
+.example-section > .code-block{
+    margin-top: 15px;
+}
+
+.numerical-result {
+    vertical-align: middle;
+    font-size: 38px;
+    text-align: center;
+}

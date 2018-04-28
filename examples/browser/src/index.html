@@ -1,14 +1,191 @@
 <html>
 
-<head>
-  <script src="test.js"></script>
-</head>
+  <head>
+    <script src="test.js"></script>
+    <link rel="stylesheet" href="styles.css">
+  </head>
 
-<body>
-  <h1>Test</h1>
-  <div>
-    <canvas id="testCanvas" height="500" width="800"></canvas>
-  </div>
-</body>
+  <body>
+
+    <div class="container">
+      <h1>Math chart - component for mathematical functions charts</h1>
+      <h2>1. Quick start</h2>
+      <p>
+        Install it using npm or yarn:
+        <div class="code-block">
+          <p>
+            npm install math-charts --save<br>
+            yarn add math-charts --save
+          </p>
+        </div>
+      </p>
+      <p>
+        Import FunctionsGraph class to your project:
+        <div class="code-block">
+          <p>
+            import { FunctionsGraph } from 'math-chart';
+          </p>
+        </div>
+      </p>
+      <p>
+        Set chart container using desired html canvas element id:
+        <div class="code-block">
+          <p>
+            let graph = new FunctionsGraph();<br>
+            graph.SetContainer('testCanvas');
+          </p>
+        </div>
+      </p>
+      <p>
+        Set starting viewport (X axis start, Y axis start and scale) and add
+        some functions:
+        <div class="code-block">
+          <p>
+            graph.SetViewport(-8, -2, 1);<br>
+            graph.AddFunction('x^2');
+          </p>
+        </div>
+      </p>
+      <p>
+        Draw a graph!
+        <div class="code-block">
+          <p>
+            graph.Draw();
+          </p>
+        </div>
+      </p>
+      <p>
+        Graph can be panned using mouse and resized using mouse wheel.
+      </p>
+      <div>
+        <canvas id="testCanvas" height="300" width="900"></canvas>
+      </div>
+      <h2>2. Examples</h2>
+      <div class="examples">
+
+        <div class="example-holder">
+          <div class="example-section">
+            <label>
+              Evaluate mathematical expressions:
+            </label>
+            <div class="code-block">
+              <p>
+                import { Interpreter } from 'math-chart';<br>
+                <br>
+                let interpreter = new Interpreter();<br>
+                interpreter<br>
+                .ExecuteExpression('100-4*20-(4+1)');
+              </p>
+            </div>
+          </div>
+          <div class="example-section">
+            <div class="numerical-result" style="line-height: 160px">
+              Result: 15
+            </div>
+          </div>
+        </div>
+
+        <div class="example-holder">
+          <div class="example-section">
+            <label>
+              Evaluate expressions with variables:
+            </label>
+            <div class="numerical-result" style="line-height: 117px">
+              Result: 0
+            </div>
+          </div>
+          <div class="example-section">
+
+            <div class="code-block">
+              <p>
+                import { Interpreter } from 'math-chart';<br>
+                <br>
+                let interpreter = new Interpreter();<br>
+                interpreter<br>
+                .EvaluateExpression('x^2+14-y', {x:6, y:50});
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="example-holder">
+          <div class="example-section">
+            <label>
+              Evaluate mathematical expressions without explicit multiplication:
+            </label>
+            <div class="code-block">
+              <p>
+                import { Interpreter } from 'math-chart';<br>
+                <br>
+                let interpreter = new Interpreter();<br>
+                interpreter<br>
+                .EvaluateExpression('2(q+2)+3(q-1)', {q:2});
+              </p>
+            </div>
+          </div>
+          <div class="example-section">
+            <div class="numerical-result" style="line-height: 165px">
+              Result: 11
+            </div>
+          </div>
+        </div>
+
+        <div class="example-holder">
+          <div class="example-section">
+            <label>
+              Draw graphs with multiple functions
+            </label>
+            <canvas id="graph2" height="300" width="400"></canvas>
+          </div>
+          <div class="example-section">
+            <div class="code-block" style="margin-top: 80px">
+              <p>
+                import { FunctionsGraph } from 'math-chart';<br>
+                let graph2 = new FunctionsGraph();<br>
+                graph2.SetContainer('graph2');<br>
+                graph2.SetViewport(-4, -3, 1);<br>
+                graph2.AddFunction('x^3');<br>
+                graph2.AddFunction('sqrt(x+2)');<br>
+                graph2.AddFunction('2/x');<br>
+                graph2.Draw();
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="example-holder">
+          <div class="example-section">
+            <div class="code-block" style="margin-top: 80px">
+              <p>
+                import { FunctionsGraph } from 'math-chart';<br>
+                let graph3 = new FunctionsGraph();<br>
+                graph3.SetContainer('graph3');<br>
+                graph3.SetViewport(0, 0, 1);<br>
+                graph3.AddFunction('x-3');<br>
+                graph3.AddFunction('-x-3');<br>
+                graph3.Draw();
+              </p>
+            </div>
+          </div>
+          <div class="example-section">
+            <label>
+              Static graph
+            </label>
+            <canvas id="graph3" height="300" width="400"></canvas>
+          </div>
+
+        </div>
+
+
+
+
+      </div>
+
+    </div>
+
+
+  </body>
 
 </html>

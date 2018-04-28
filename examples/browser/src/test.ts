@@ -8,10 +8,27 @@ window.interpreter = interpreter;
 document.addEventListener("DOMContentLoaded", function (event) {
     let graph = new FunctionsGraph();
     graph.SetContainer('testCanvas');
-    graph.SetViewport(-5, -5, 1);
+    graph.SetViewport(-8, -2, 1);
     graph.AddFunction('x^2');
-
     graph.Draw();
+
+
+
+    let graph2 = new FunctionsGraph();
+    graph2.SetContainer('graph2');
+    graph2.SetViewport(-4, -3, 1);
+    graph2.AddFunction('x^3');
+    graph2.AddFunction('sqrt(x+2)');
+    graph2.AddFunction('2/x');
+    graph2.Draw();
+
+    let graph3 = new FunctionsGraph();
+    graph3.SetContainer('graph3');
+    graph3.SetViewport(0, 0, 1);
+    graph3.AddFunction('x-3');
+    graph3.AddFunction('-x-3');
+    graph3.Draw();
+
 });
 
 
