@@ -174,7 +174,7 @@ class FunctionsGraph implements IFunctionManager {
    */
   SetViewport(startX: number, startY: number, scale: number = 1) {
     this.Viewport = new Viewport(startX, startY, scale);
-    this.SetEvaluationBoundaries(startX, 0.2 / scale, (this.Context.Width / (this.PixelsPerValueBase * scale)) * 10);
+    this.SetEvaluationBoundaries(startX, 0.1 / scale, (this.Context.Width / (this.PixelsPerValueBase * scale)) * 10 * scale);
   }
 
   /**
