@@ -54,7 +54,7 @@ class FunctionsGraph implements IFunctionManager {
    * Initializes resize event listener on canvas
    * @param container Canvas id
    */
-  InitResize(container: string): void {
+  private InitResize(container: string): void {
     if (!this.Settings.canResize) {
       return;
     }
@@ -109,7 +109,7 @@ class FunctionsGraph implements IFunctionManager {
     }
   }
 
-  InitMove(container: string): void {
+  private InitMove(container: string): void {
     if (!this.Settings.canMove) {
       return;
     }
@@ -123,7 +123,7 @@ class FunctionsGraph implements IFunctionManager {
    * Processes graph resize event by increasing/decreasing scale
    * @param event Mouse wheel event
    */
-  ProcessResize(event: MouseWheelEvent): void {
+  private ProcessResize(event: MouseWheelEvent): void {
     event.preventDefault();
     if (!this.Settings.canResize) {
       return;
@@ -158,7 +158,7 @@ class FunctionsGraph implements IFunctionManager {
    * Sets a container for a graph
    * @param container Id of html container
    */
-  SetContainer(container: string) {
+   SetContainer(container: string) {
     this.Container = container;
     this.Context = prepareCanvas(this.Container);
     this.InitResize(container);

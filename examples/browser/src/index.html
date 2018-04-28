@@ -208,14 +208,16 @@
 
           <div class="example-section">
             <label>
-              Custom colors
+              Custom colors and font
             </label>
             <div class="code-block" style="margin-top: 20px">
               <p>
                 import { FunctionsGraph } from 'math-chart';<br>
                 <br>
                 let functionColors = ['#ad8708','#edbd1e','#ffd64f'];<br>
-                let graph5 = new FunctionsGraph({ functionColors: functionColors, labelFont: '12px monospace', gridColor: '#c8daf7'});<br>
+                let graph5 = new FunctionsGraph({ functionColors:
+                functionColors, labelFont: '12px monospace', gridColor:
+                '#c8daf7'});<br>
                 graph5.SetContainer('graph5');<br>
                 graph5.SetViewport(-1, -2, 1);<br>
                 graph5.AddFunction('x^3-3x^2+1');<br>
@@ -231,9 +233,248 @@
         </div>
 
       </div>
-    </div>
+
+      <div>
+        <h2>3. API</h2>
+        <h3>Interpreter</h3>
+        <sub>Allows numerical evalutation of functions with or without variables</sub>
+        <div>
+          <table>
+            <thead>
+              <tr>
+                <th>Operation</th>
+                <th>Explanation</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <pre>CreateExpression(expression: string):IExpression</pre>
+                  </td>
+                  <td>Parses given string expression to computable expression
+                    that can be executed by math chart plugin. Called internally
+                    by execute
+                    and evaluate expression
+                    methods</td>
+                </tr>
+                <tr>
+                  <td>
+                    <pre>ExecuteExpression(expression: string): number</pre>
+                  </td>
+                  <td>Executes numerical expression (without variables)</td>
+                </tr>
+                <tr>
+                  <td>
+                    <pre>ExecuteParsedExpression(expression: IExpression): number
+                    </pre>
+                  </td>
+                  <td>Executes parsed numerical expression (without variables),
+                    parsed with CreateExpression method</td>
+                </tr>
+                <tr>
+                  <td>
+                    <pre>EvaluateExpression(expression: string, replacementDictionary: any): number
+                    </pre>
+                  </td>
+                  <td>Evaluates string expression result using given variable
+                    replacement values. For example, {x: 2, y : 4}</td>
+                </tr>
+                <tr>
+                  <td>
+                    <pre>EvaluateParsedExpression(expression: IExpression, replacementDictionary: any): number
+                    </pre>
+                  </td>
+                  <td>Evaluates parsed expression result using given variable
+                    replacement values. For example, {x: 2, y : 4}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Functions graph</h3>
+          <sub>Manages all graph drawing</sub>
+          <div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Operation</th>
+                  <th>Explanation</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <pre>SetContainer(container: string)</pre>
+                    </td>
+                    <td>Sets a graph container to a given canvas element id.</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <pre>AddFunction(functionExpression: string)</pre>
+                    </td>
+                    <td>Adds a new function to a graph</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <pre>RemoveFunction(index: number)</pre>
+                    </td>
+                    <td>Removes a function from a graph by given index</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <pre>SetEvaluationBoundaries(start: number, step: number, count: number)</pre>
+                    </td>
+                    <td>Sets functions evaluation boundaries. Start defines
+                      starting x value, step defines functions smootness, count
+                      - number of function evaluation steps</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <pre>SetViewport(startX: number, startY: number, scale: number = 1)</pre>
+                    </td>
+                    <td>Sets graph viewport. startX - starting value on X axis
+                      (on the left); startY - starting value on Y axis (on the
+                      bottom); scale - Graph's scale</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <pre>Draw()</pre>
+                    </td>
+                    <td>Explicitly redraws graph with all functions</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <pre>UpdateSettings(newSettings: any)</pre>
+                    </td>
+                    <td>Updates existing graph settings. If any setting is not
+                      passed, its default value is used (see below)</td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+            <h3>Functions graph configuration</h3>
+            <sub>Configuration, passed via FunctionsGraph constructor or
+              UpdateSettingsMethod</sub>
+            <div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Setting</th>
+                    <th>Type</th>
+                    <th>Role</th>
+                    <th>Default value</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><pre>drawGrid</pre></td>
+                      <td>Boolean</td>
+                      <td>Draw a graph grid</td>
+                      <td><pre>true</pre></td>
+                    </tr>
+                    <tr>
+                      <td><pre>drawFunctions</pre></td>
+                      <td>Boolean</td>
+                      <td>Draw graph functions</td>
+                      <td><pre>true</pre></td>
+                    </tr>
+                    <tr>
+                      <td><pre>gridColor</pre></td>
+                      <td>String - color hex</td>
+                      <td>Color of a graph grid</td>
+                      <td><pre>#75ea88</pre></td>
+                    </tr>
+                    <tr>
+                      <td><pre>labelColor</pre></td>
+                      <td>String - color hex</td>
+                      <td>Color of graph labels</td>
+                      <td><pre>#000</pre></td>
+                    </tr>
+                    <tr>
+                      <td><pre>drawGridLabels</pre></td>
+                      <td>Boolean</td>
+                      <td>Draw graph labels</td>
+                      <td><pre>true</pre></td>
+                    </tr>
+                    <tr>
+                      <td><pre>labelFont</pre></td>
+                      <td>String - font</td>
+                      <td>Font of graph labels</td>
+                      <td><pre>14px serif</pre></td>
+                    </tr>
+                    <tr>
+                      <td><pre>canResize</pre></td>
+                      <td>Boolean</td>
+                      <td>Can graph be resized using mouse wheel</td>
+                      <td><pre>true</pre></td>
+                    </tr>
+                    <tr>
+                      <td><pre>canMove</pre></td>
+                      <td>Boolean</td>
+                      <td>Can graph be panned using mouse drag</td>
+                      <td><pre>true</pre></td>
+                    </tr>
+                    <tr>
+                      <td><pre>functionColors</pre></td>
+                      <td>String[] - array of hex colors</td>
+                      <td>Colors of functions</td>
+                      <td><pre>['#4286f4', '#f44141', '#1c9620','#e8a23a']</pre></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <h2>4. Available operations</h1>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Operation</th>
+                    <th>Expression</th>
+                    <th>Arity</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Sum</td>
+                    <td><pre>{x}+{y}</pre></td>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <td>Difference - Subraction</td>
+                    <td><pre>{x}-{y}</pre></td>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <td>Product - Multiplication</td>
+                    <td><pre>{x}*{y}</pre></td>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <td>Quotient - Division</td>
+                    <td><pre>{x}/{y}</pre></td>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <td>Power</td>
+                    <td><pre>{x}^{y}</pre></td>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <td>Parenthesis</td>
+                    <td><pre>({x})</pre></td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>Square root</td>
+                    <td><pre>sqrt({x})</pre></td>
+                    <td>1</td>
+                  </tr>
+                </tbody>
+              </table>
 
 
-  </body>
+            </div>
 
-</html>
+          </div>
+
+
+        </body>
+
+      </html>
