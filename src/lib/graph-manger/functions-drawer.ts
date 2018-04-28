@@ -45,19 +45,21 @@ export default class FunctionsDrawer {
     for (var i = 0; i < results.length - 1; i++) {
       if (results[i].isDefined && results[i + 1].isDefined) {
 
-        if (Math.abs(results[i].y - results[i + 1].y) > 400) {
-          continue;
+        var y0 = this.GraphParameters.BaseY - results[i].y * this.pixelsPerValue;
+        var y1 = this.GraphParameters.BaseY - results[i + 1].y * this.pixelsPerValue;
+        if (Math.abs(y0 - y1) > 1000) {
+            continue;
         }
 
         ctx.beginPath();
 
         ctx.moveTo(
           this.GraphParameters.BaseX + results[i].x * this.pixelsPerValue,
-          this.GraphParameters.BaseY - results[i].y * this.pixelsPerValue
+          y0
         );
         ctx.lineTo(
           this.GraphParameters.BaseX + results[i + 1].x * this.pixelsPerValue,
-          this.GraphParameters.BaseY - results[i + 1].y * this.pixelsPerValue
+          y1
         );
         ctx.closePath();
         ctx.stroke();
