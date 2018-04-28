@@ -29,7 +29,6 @@ class LabelSetting {
 
 class GraphSettings {
   constructor(params: any) {
-    console.log(params);
     this.drawGrid = params.drawGrid === undefined ? true : params.drawGrid;
     this.drawFunctions = params.drawFunctions === undefined ? true : params.drawFunctions;
     this.gridColor = params.gridColor || '#75ea88';

@@ -11,8 +11,8 @@
 
       <h1>Math chart - component for mathematical functions charts</h1>
       <div>
-          <canvas id="testCanvas" height="300" width="900"></canvas>
-        </div>
+        <canvas id="testCanvas" height="300" width="900"></canvas>
+      </div>
       <h2>1. Quick start</h2>
       <p>
         Install it using npm or yarn:
@@ -163,12 +163,14 @@
             </label>
             <div class="code-block" style="margin-top: 80px">
               <p>
-                  let graph3 = new FunctionsGraph({canResize: false, canMove: false});<br>
-                  graph3.SetContainer('graph3');<br>
-                  graph3.SetViewport(-1, -2, 1);<br>
-                  graph3.AddFunction('x-3');<br>
-                  graph3.AddFunction('-x+4');<br>
-                  graph3.Draw();
+                import { FunctionsGraph } from 'math-chart';<br>
+                let graph3 = new FunctionsGraph({canResize: false, canMove:
+                false});<br>
+                graph3.SetContainer('graph3');<br>
+                graph3.SetViewport(-1, -2, 1);<br>
+                graph3.AddFunction('x-3');<br>
+                graph3.AddFunction('-x+4');<br>
+                graph3.Draw();
               </p>
             </div>
           </div>
@@ -178,9 +180,57 @@
 
         </div>
 
+        <div class="example-holder">
+          <div class="example-section">
+            <label>
+              No grid or labels
+            </label>
+            <canvas id="graph4" height="300" width="400"></canvas>
+          </div>
+          <div class="example-section">
+
+            <div class="code-block" style="margin-top: 80px">
+              <p>
+                import { FunctionsGraph } from 'math-chart';<br>
+                let graph4 = new FunctionsGraph({drawGrid: false,
+                drawGridLabels: false});<br>
+                graph4.SetContainer('graph4');<br>
+                graph4.SetViewport(-1, -2, 1);<br>
+                graph4.AddFunction('x^(x-3)');<br>
+                graph4.AddFunction('x^4+2x^3-6x^2');<br>
+                graph4.Draw();
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="example-holder">
+
+          <div class="example-section">
+            <label>
+              Custom colors
+            </label>
+            <div class="code-block" style="margin-top: 20px">
+              <p>
+                import { FunctionsGraph } from 'math-chart';<br>
+                <br>
+                let functionColors = ['#ad8708','#edbd1e','#ffd64f'];<br>
+                let graph5 = new FunctionsGraph({ functionColors: functionColors, labelFont: '12px monospace', gridColor: '#c8daf7'});<br>
+                graph5.SetContainer('graph5');<br>
+                graph5.SetViewport(-1, -2, 1);<br>
+                graph5.AddFunction('x^3-3x^2+1');<br>
+                graph5.AddFunction('2^x');<br>
+                graph5.AddFunction('x');<br>
+                graph5.Draw();
+              </p>
+            </div>
+          </div>
+          <div class="example-section">
+            <canvas id="graph5" height="300" width="400"></canvas>
+          </div>
+        </div>
 
       </div>
-
     </div>
 
 

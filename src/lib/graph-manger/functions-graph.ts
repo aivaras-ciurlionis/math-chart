@@ -47,6 +47,7 @@ class FunctionsGraph implements IFunctionManager {
     this.Functions = new MathFuncions();
     this.GraphDrawer = new GraphDrawer();
     this.Settings = new GraphSettings(settings || {});
+    this.GraphDrawer.UpdateSettings(settings || {});
   }
 
   /**
