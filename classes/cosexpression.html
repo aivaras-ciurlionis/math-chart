@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ISymbolTypeChecker | math-chart</title>
+	<title>CosExpression | math-chart</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style type="text/css">/*! normalize.css v1.1.3 | MIT License | git.io/normalize */
@@ -909,11 +909,29 @@ img { max-width: 100%; }
 </header>
 <nav class="tsd-navigation secondary">
 	<ul>
-		<li class="current tsd-kind-interface tsd-is-not-exported">
-			<a href="isymboltypechecker.html" class="tsd-kind-icon">ISymbol<wbr>Type<wbr>Checker</a>
+		<li class="current tsd-kind-class tsd-is-not-exported">
+			<a href="cosexpression.html" class="tsd-kind-icon">Cos<wbr>Expression</a>
 			<ul>
-				<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-					<a href="isymboltypechecker.html#getsymboltype" class="tsd-kind-icon">Get<wbr>Symbol<wbr>Type</a>
+				<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-not-exported">
+					<a href="cosexpression.html#constructor" class="tsd-kind-icon">constructor</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-not-exported">
+					<a href="cosexpression.html#arity" class="tsd-kind-icon">Arity</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-not-exported">
+					<a href="cosexpression.html#operands" class="tsd-kind-icon">Operands</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-not-exported">
+					<a href="cosexpression.html#order" class="tsd-kind-icon">Order</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-not-exported">
+					<a href="cosexpression.html#clone" class="tsd-kind-icon">Clone</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-not-exported">
+					<a href="cosexpression.html#execute" class="tsd-kind-icon">Execute</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-not-exported">
+					<a href="cosexpression.html#replacevariables" class="tsd-kind-icon">Replace<wbr>Variables</a>
 				</li>
 			</ul>
 		</li>
@@ -921,18 +939,30 @@ img { max-width: 100%; }
 </nav>
 <div class="container container-main">
 	<div class="content-wrap">
+		<section class="tsd-panel tsd-comment">
+			<div class="tsd-comment tsd-typography">
+				<div class="lead">
+					<p>Expression that represents a square root of two numbers sqrt(4)</p>
+				</div>
+			</div>
+		</section>
 		<section class="tsd-panel tsd-hierarchy">
 			<h3>Hierarchy</h3>
 			<ul class="tsd-hierarchy">
 				<li>
-					<span class="target">ISymbolTypeChecker</span>
+					<a href="baseexpression.html" class="tsd-signature-type">BaseExpression</a>
+					<ul class="tsd-hierarchy">
+						<li>
+							<span class="target">CosExpression</span>
+						</li>
+					</ul>
 				</li>
 			</ul>
 		</section>
 		<section class="tsd-panel">
-			<h3>Implemented by</h3>
+			<h3>Implements</h3>
 			<ul class="tsd-hierarchy">
-				<li><a href="../classes/symboltypechecker.html" class="tsd-signature-type">SymbolTypeChecker</a></li>
+				<li><a href="../interfaces/iexpression.html" class="tsd-signature-type">IExpression</a></li>
 			</ul>
 		</section>
 		<section class="tsd-panel-group tsd-index-group">
@@ -940,53 +970,169 @@ img { max-width: 100%; }
 			<section class="tsd-panel tsd-index-panel">
 				<div class="tsd-index-content">
 					<section class="tsd-index-section tsd-is-not-exported">
+						<h3>Constructors</h3>
+						<ul class="tsd-index-list">
+							<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-not-exported"><a href="cosexpression.html#constructor" class="tsd-kind-icon">constructor</a></li>
+						</ul>
+					</section>
+					<section class="tsd-index-section tsd-is-not-exported">
+						<h3>Properties</h3>
+						<ul class="tsd-index-list">
+							<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-not-exported"><a href="cosexpression.html#arity" class="tsd-kind-icon">Arity</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-not-exported"><a href="cosexpression.html#operands" class="tsd-kind-icon">Operands</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-not-exported"><a href="cosexpression.html#order" class="tsd-kind-icon">Order</a></li>
+						</ul>
+					</section>
+					<section class="tsd-index-section tsd-is-not-exported">
 						<h3>Methods</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="isymboltypechecker.html#getsymboltype" class="tsd-kind-icon">Get<wbr>Symbol<wbr>Type</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-not-exported"><a href="cosexpression.html#clone" class="tsd-kind-icon">Clone</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-not-exported"><a href="cosexpression.html#execute" class="tsd-kind-icon">Execute</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-not-exported"><a href="cosexpression.html#replacevariables" class="tsd-kind-icon">Replace<wbr>Variables</a></li>
 						</ul>
 					</section>
 				</div>
 			</section>
 		</section>
 		<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
-			<h2>Methods</h2>
-			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-				<a name="getsymboltype" class="tsd-anchor"></a>
-				<h3>Get<wbr>Symbol<wbr>Type</h3>
-				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-					<li class="tsd-signature tsd-kind-icon">Get<wbr>Symbol<wbr>Type<span class="tsd-signature-symbol">(</span>char<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">SymbolType.Numeric</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">SymbolType.Parenthesis</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">SymbolType.Symbol</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">SymbolType.Other</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">SymbolType.Equality</span></li>
+			<h2>Constructors</h2>
+			<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class tsd-is-not-exported">
+				<a name="constructor" class="tsd-anchor"></a>
+				<h3>constructor</h3>
+				<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-not-exported">
+					<li class="tsd-signature tsd-kind-icon">new <wbr>Cos<wbr>Expression<span class="tsd-signature-symbol">(</span>operand<span class="tsd-signature-symbol">: </span><a href="../interfaces/iexpression.html" class="tsd-signature-type">IExpression</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="cosexpression.html" class="tsd-signature-type">CosExpression</a></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/aivaras-ciurlionis/math-chart/blob/4db3bfe/src/lib/parser/SymbolTypeChecker.ts#L8">lib/parser/SymbolTypeChecker.ts:8</a></li>
+								<li>Defined in <a href="https://github.com/aivaras-ciurlionis/math-chart/blob/4db3bfe/src/lib/expressions/arithmetic/CosExpression.ts#L10">lib/expressions/arithmetic/CosExpression.ts:10</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>operand: <a href="../interfaces/iexpression.html" class="tsd-signature-type">IExpression</a></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <a href="cosexpression.html" class="tsd-signature-type">CosExpression</a></h4>
+					</li>
+				</ul>
+			</section>
+		</section>
+		<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+			<h2>Properties</h2>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-not-exported">
+				<a name="arity" class="tsd-anchor"></a>
+				<h3>Arity</h3>
+				<div class="tsd-signature tsd-kind-icon">Arity<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;1</span></div>
+				<aside class="tsd-sources">
+					<p>Implementation of <a href="../interfaces/iexpression.html">IExpression</a>.<a href="../interfaces/iexpression.html#arity">Arity</a></p>
+					<p>Overrides <a href="baseexpression.html">BaseExpression</a>.<a href="baseexpression.html#arity">Arity</a></p>
+					<ul>
+						<li>Defined in <a href="https://github.com/aivaras-ciurlionis/math-chart/blob/4db3bfe/src/lib/expressions/arithmetic/CosExpression.ts#L9">lib/expressions/arithmetic/CosExpression.ts:9</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-not-exported">
+				<a name="operands" class="tsd-anchor"></a>
+				<h3>Operands</h3>
+				<div class="tsd-signature tsd-kind-icon">Operands<span class="tsd-signature-symbol">:</span> <a href="../interfaces/iexpression.html" class="tsd-signature-type">IExpression</a><span class="tsd-signature-symbol">[]</span></div>
+				<aside class="tsd-sources">
+					<p>Implementation of <a href="../interfaces/iexpression.html">IExpression</a>.<a href="../interfaces/iexpression.html#operands">Operands</a></p>
+					<p>Overrides <a href="baseexpression.html">BaseExpression</a>.<a href="baseexpression.html#operands">Operands</a></p>
+					<ul>
+						<li>Defined in <a href="https://github.com/aivaras-ciurlionis/math-chart/blob/4db3bfe/src/lib/expressions/arithmetic/CosExpression.ts#L8">lib/expressions/arithmetic/CosExpression.ts:8</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-not-exported">
+				<a name="order" class="tsd-anchor"></a>
+				<h3>Order</h3>
+				<div class="tsd-signature tsd-kind-icon">Order<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;1</span></div>
+				<aside class="tsd-sources">
+					<p>Implementation of <a href="../interfaces/iexpression.html">IExpression</a>.<a href="../interfaces/iexpression.html#order">Order</a></p>
+					<p>Overrides <a href="baseexpression.html">BaseExpression</a>.<a href="baseexpression.html#order">Order</a></p>
+					<ul>
+						<li>Defined in <a href="https://github.com/aivaras-ciurlionis/math-chart/blob/4db3bfe/src/lib/expressions/arithmetic/CosExpression.ts#L10">lib/expressions/arithmetic/CosExpression.ts:10</a></li>
+					</ul>
+				</aside>
+			</section>
+		</section>
+		<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+			<h2>Methods</h2>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-not-exported">
+				<a name="clone" class="tsd-anchor"></a>
+				<h3>Clone</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-not-exported">
+					<li class="tsd-signature tsd-kind-icon">Clone<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/iexpression.html" class="tsd-signature-type">IExpression</a></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<p>Implementation of <a href="../interfaces/iexpression.html">IExpression</a>.<a href="../interfaces/iexpression.html#clone">Clone</a></p>
+							<p>Overrides <a href="baseexpression.html">BaseExpression</a>.<a href="baseexpression.html#clone">Clone</a></p>
+							<ul>
+								<li>Defined in <a href="https://github.com/aivaras-ciurlionis/math-chart/blob/4db3bfe/src/lib/expressions/arithmetic/CosExpression.ts#L24">lib/expressions/arithmetic/CosExpression.ts:24</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-returns-title">Returns <a href="../interfaces/iexpression.html" class="tsd-signature-type">IExpression</a></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-not-exported">
+				<a name="execute" class="tsd-anchor"></a>
+				<h3>Execute</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-not-exported">
+					<li class="tsd-signature tsd-kind-icon">Execute<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<p>Implementation of <a href="../interfaces/iexpression.html">IExpression</a>.<a href="../interfaces/iexpression.html#execute">Execute</a></p>
+							<p>Overrides <a href="baseexpression.html">BaseExpression</a>.<a href="baseexpression.html#execute">Execute</a></p>
+							<ul>
+								<li>Defined in <a href="https://github.com/aivaras-ciurlionis/math-chart/blob/4db3bfe/src/lib/expressions/arithmetic/CosExpression.ts#L20">lib/expressions/arithmetic/CosExpression.ts:20</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+						</div>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						<p>A square root of an operand</p>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-not-exported">
+				<a name="replacevariables" class="tsd-anchor"></a>
+				<h3>Replace<wbr>Variables</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-not-exported">
+					<li class="tsd-signature tsd-kind-icon">Replace<wbr>Variables<span class="tsd-signature-symbol">(</span>replacementDictionary<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/iexpression.html" class="tsd-signature-type">IExpression</a></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<p>Implementation of <a href="../interfaces/iexpression.html">IExpression</a>.<a href="../interfaces/iexpression.html#replacevariables">ReplaceVariables</a></p>
+							<p>Inherited from <a href="baseexpression.html">BaseExpression</a>.<a href="baseexpression.html#replacevariables">ReplaceVariables</a></p>
+							<ul>
+								<li>Defined in <a href="https://github.com/aivaras-ciurlionis/math-chart/blob/4db3bfe/src/lib/expressions/BaseExpression.ts#L22">lib/expressions/BaseExpression.ts:22</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
-								<p>Returs a symbol type of a single character</p>
+								<p>Replaces variables with given values</p>
 							</div>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
 							<li>
-								<h5>char: <span class="tsd-signature-type">string</span></h5>
+								<h5>replacementDictionary: <span class="tsd-signature-type">any</span></h5>
 								<div class="tsd-comment tsd-typography">
-									<p>Single character</p>
+									<p>Variable values to replace: {x: 2, y: 4}</p>
 								</div>
 							</li>
 						</ul>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">SymbolType.Numeric</span>
-							<span class="tsd-signature-symbol"> | </span>
-							<span class="tsd-signature-type">SymbolType.Parenthesis</span>
-							<span class="tsd-signature-symbol"> | </span>
-							<span class="tsd-signature-type">SymbolType.Symbol</span>
-							<span class="tsd-signature-symbol"> | </span>
-							<span class="tsd-signature-type">SymbolType.Other</span>
-							<span class="tsd-signature-symbol"> | </span>
-							<span class="tsd-signature-type">SymbolType.Equality</span>
-						</h4>
+						<h4 class="tsd-returns-title">Returns <a href="../interfaces/iexpression.html" class="tsd-signature-type">IExpression</a></h4>
+						<p>Expression with numerical values</p>
 					</li>
 				</ul>
 			</section>
