@@ -3,7 +3,6 @@ import { FunctionsGraph, Interpreter } from 'math-chart';
 let interpreter = new Interpreter();
 console.log(interpreter.ExecuteExpression('2+2'));
 console.log(interpreter.ExecuteExpression('sqrt(0)'));
-window.interpreter = interpreter;
 
 document.addEventListener("DOMContentLoaded", function (event) {
     let graph = new FunctionsGraph();
@@ -24,9 +23,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     let graph3 = new FunctionsGraph();
     graph3.SetContainer('graph3');
-    graph3.SetViewport(0, 0, 1);
+    graph3.SetViewport(-1, -2, 1);
     graph3.AddFunction('x-3');
-    graph3.AddFunction('-x-3');
+    graph3.AddFunction('-x+4');
+    graph3.UpdateSettings({canResize: false, canMove: false})
     graph3.Draw();
 
 });

@@ -29,14 +29,15 @@ class LabelSetting {
 
 class GraphSettings {
   constructor(params: any) {
-    this.drawGrid = params.drawGrid || true;
-    this.drawFunctions = params.drawFunctions || true;
+    console.log(params);
+    this.drawGrid = params.drawGrid === undefined ? true : params.drawGrid;
+    this.drawFunctions = params.drawFunctions === undefined ? true : params.drawFunctions;
     this.gridColor = params.gridColor || '#75ea88';
     this.labelColor = params.labelColor || '#000';
-    this.drawGridLabels = params.drawGridLabels || true;
+    this.drawGridLabels = params.drawGridLabels === undefined ? true : params.drawGridLabels;
     this.labelFont = params.labelFont || '14px serif';
-    this.canResize = params.canResize || true;
-    this.canMove = params.canMove || true;
+    this.canResize = params.canResize === undefined ? true : params.canResize;
+    this.canMove = params.canMove === undefined ? true : params.canMove;
     this.functionColors = params.functionColors || [
       '#4286f4',
       '#f44141',

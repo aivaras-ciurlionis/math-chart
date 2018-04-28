@@ -14,10 +14,10 @@ class GraphDrawer {
 
   /**
    * Updates current drawer settings
-   * @param settings Graph settings
+   * @param settings Graph settings replacement
    */
-  UpdateSettings(settings: GraphSettings) {
-    this.Settings = settings;
+  UpdateSettings(settings: any) {
+    this.Settings = new GraphSettings(settings);
   }
 
   /**
