@@ -9,6 +9,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
     graph.SetContainer('testCanvas');
     graph.SetViewport(-8, -2, 1);
     graph.AddFunction('x^2');
+    graph.AddFunction('lg(-x)');
+    graph.AddFunction('ln(x+3)');
     graph.Draw();
 
 
@@ -48,10 +50,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
         }
     );
     graph5.SetContainer('graph5');
-    graph5.SetViewport(-1, -2, 1);
+    graph5.SetViewport(-6, -4, 0.7);
     graph5.AddFunction('x^3-3x^2+1');
     graph5.AddFunction('2^x');
-    graph5.AddFunction('x');
+    graph5.AddFunction('sin(x)');
     graph5.Draw();
 
 });

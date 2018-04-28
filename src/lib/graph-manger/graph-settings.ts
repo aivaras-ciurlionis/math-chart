@@ -40,7 +40,7 @@ class GraphSettings {
     this.functionColors = params.functionColors || [
       '#4286f4',
       '#f44141',
-      '#1c9620',
+      '#772f93',
       '#e8a23a'
     ]
     this.gridWidths = [
