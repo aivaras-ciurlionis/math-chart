@@ -103,10 +103,10 @@ class FunctionsGraph implements IFunctionManager {
     } else {
       scale = 0.95;
     }
+    let newX = this.Viewport.StartX * scale + event.x / this.PixelsPerValueBase * scale;
+    let newY = this.Viewport.StartY * scale - event.y / this.PixelsPerValueBase * scale;
     this.SetViewport(
-      this.Viewport.StartX * scale,
-      this.Viewport.StartY * scale,
-      this.Viewport.Scale * scale
+      newX, newY, this.Viewport.Scale * scale
     );
     this.Draw();
   }
