@@ -1,6 +1,9 @@
+<!DOCTYPE html>
 <html>
 
   <head>
+    <meta charset="UTF-8">
+    <title>Math Chart</title>
     <script src="test.js"></script>
     <link rel="stylesheet" href="styles.css">
   </head>
@@ -46,7 +49,9 @@
         <div class="code-block">
           <p>
             graph.SetViewport(-8, -2, 1);<br>
-            graph.AddFunction('x^2');
+            graph.AddFunction('x^2');<br>
+            graph.AddFunction('lg(-x)');<br>
+            graph.AddFunction('ln(x+3)');<br>
           </p>
         </div>
       </p>
@@ -222,7 +227,7 @@
                 graph5.SetViewport(-1, -2, 1);<br>
                 graph5.AddFunction('x^3-3x^2+1');<br>
                 graph5.AddFunction('2^x');<br>
-                graph5.AddFunction('x');<br>
+                graph5.AddFunction('sin(x)+x');<br>
                 graph5.Draw();
               </p>
             </div>
@@ -416,7 +421,7 @@
                       <td><pre>functionColors</pre></td>
                       <td>String[] - array of hex colors</td>
                       <td>Colors of functions</td>
-                      <td><pre>['#4286f4', '#f44141', '#b72d80','#e8a23a']</pre></td>
+                      <td><pre>['#4286f4', '#f44141', '#772f93','#e8a23a']</pre></td>
                     </tr>
                   </tbody>
                 </table>
@@ -466,6 +471,31 @@
                     <td><pre>sqrt({x})</pre></td>
                     <td>1</td>
                   </tr>
+                  <tr>
+                    <td>Sin</td>
+                    <td><pre>sin({x})</pre></td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>Cos</td>
+                    <td><pre>cos({x})</pre></td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>Tan</td>
+                    <td><pre>tan({x})</pre></td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>Natural logarithm</td>
+                    <td><pre>ln({x})</pre></td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>Base 10 logarithm</td>
+                    <td><pre>lg({x})</pre></td>
+                    <td>1</td>
+                  </tr>
                 </tbody>
               </table>
 
@@ -473,6 +503,7 @@
             </div>
 
           </div>
+          <div class="footer">Aivaras Čiurlionis 2018</div>
 
 
         </body>

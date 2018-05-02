@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     graph5.SetViewport(-6, -4, 0.7);
     graph5.AddFunction('x^3-3x^2+1');
     graph5.AddFunction('2^x');
-    graph5.AddFunction('sin(x)');
+    graph5.AddFunction('sin(x)+x');
     graph5.Draw();
 
 });
