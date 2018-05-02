@@ -210,7 +210,6 @@ class FunctionsGraph implements IFunctionManager {
   Draw(): void {
     const evaluation = this.Functions.EvaluateFunctions();
     this.GraphDrawer.Draw(this.Context, evaluation, this.Viewport, this.PixelsPerValueBase);
-    this.Context = prepareCanvas(this.Container);
   }
 
   /**
