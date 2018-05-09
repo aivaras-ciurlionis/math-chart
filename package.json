@@ -82,25 +82,13 @@
     "typescript": "^2.4.1"
   },
   "keywords": [
-    "async",
-    "ava",
-    "await",
-    "boilerplate",
-    "conventional-changelog",
-    "ES6",
-    "ES7",
-    "library",
-    "javascript-modules",
-    "node",
-    "nyc",
-    "rollup",
-    "starter",
-    "template",
-    "tree-shaking",
-    "tslint",
-    "typedoc",
+    "math",
+    "functions",
+    "education",
+    "graph",
+    "chart",
     "typescript",
-    "typings"
+    "grid"
   ],
   "nyc": {
     "exclude": [
